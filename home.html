@@ -1,118 +1,220 @@
 <!DOCTYPE html>
 <html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home page</title>
-  <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
-
-<body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="navbar p-0 col-2 bg-black" id="navSx">
-        <!-- side navbar sx -->
-        <!-- 3_dots -->
-        <div class="col-12">
-          <ul style="list-style: none">
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-three-dots"
-                viewBox="0 0 16 16">
-                <path
-                  d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
-              </svg>
-            </li>
-            <!-- home -->
-            <li>
-              <div class="text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
-                  class="bi bi-house-door-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
-                </svg>
-                Home
-              </div>
-            </li>
-
-            <!-- search -->
-            <li>
-              <div class="text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-search"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                </svg>
-                Cerca
-              </div>
-            </li>
-
-            <!-- library -->
-            <li>
-              <div class="text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
-                  class="bi bi-distribute-horizontal" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M14.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5m-13 0a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5" />
-                  <path d="M6 13a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z" />
-                </svg>
-                La tua libreria
-              </div>
-            </li>
-          </ul>
-
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        
+        <div class="navbar p-0 col-2 bg-black" id="navSx">
+          <!-- side navbar sx -->
+          <!-- 3_dots -->
           <div>
-            <ul style="list-style: none">
-              <!-- playlist -->
-              <li>
-                <div class="text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+            <div>
+              <ul>
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="white"
+                    class="bi bi-three-dots"
+                    viewBox="0 0 16 16"
+                  >
                     <path
-                      d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0" />
+                      d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
+                    />
                   </svg>
-                  Crea playlist
-                </div>
-              </li>
+                </li>
+                <!-- home -->
+                <li>
+                  <div class="text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="white"
+                      class="bi bi-house-door-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"
+                      />
+                    </svg>
+                    Home
+                  </div>
+                </li>
 
-              <!-- brani che ti piacciono -->
-              <li>
-                <div class="text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
-                    class="bi bi-heart-fill cuoricino_nav py-1" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
-                  </svg>
-                  Brani che ti piacciono
-                </div>
-              </li>
-              <!-- bookmark -->
-              <li>
-                <div class="text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill=""
-                    class="bi bi-bookmark-fill bookmark_nav p-1" viewBox="0 0 16 16">
-                    <path
-                      d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2" />
-                  </svg>
-                  I tuoi episodi
-                </div>
-              </li>
-            </ul>
+                <!-- search -->
+                <li>
+                  <div class="text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="white"
+                      class="bi bi-search"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                      />
+                    </svg>
+                    Cerca
+                  </div>
+                </li>
+
+                <!-- library -->
+                <li>
+                  <div class="text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="white"
+                      class="bi bi-distribute-horizontal"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M14.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5m-13 0a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5"
+                      />
+                      <path
+                        d="M6 13a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"
+                      />
+                    </svg>
+                    La tua libreria
+                  </div>
+                </li>
+              </ul>
+
+              <div>
+                <ul>
+                  <!-- playlist -->
+                  <li>
+                    <div class="text-white">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        class="bi bi-plus-square-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0"
+                        />
+                      </svg>
+                      Crea playlist
+                    </div>
+                  </li>
+
+                  <!-- brani che ti piacciono -->
+                  <li>
+                    <div class="text-white">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="white"
+                        class="bi bi-heart-fill cuoricino_nav py-1"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
+                        />
+                      </svg>
+                      Brani che ti piacciono
+                    </div>
+                  </li>
+                  <!-- bookmark -->
+                  <li>
+                    <div class="text-white">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill=""
+                        class="bi bi-bookmark-fill bookmark_nav p-1"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"
+                        />
+                      </svg>
+                      I tuoi episodi
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <hr>
+            </div>
+
+
+            <div class="scrollbar_home">
+              
+              <ul class="text-light-emphasis ps-2 ">
+                <li>An Emily Winchester kind of mood 🔪🖕</li>
+                <li>Musical 2022</li>
+                <li>Be the young</li>
+                <li>'...' cit. Kimiko (lug-ago 2022)</li>
+                <li>saggio vibes 💃🩰</li>
+                <li>main character energy (mag-giu 2022)</li>
+                <li>VEE, CARLOTTA E GIACOMO VANNO A BOSIO</li>
+                <li>landing page (mar-apr 2022)</li>
+                <li>2021 lol</li>
+                <li>honey and glass (nov-dic 2021)</li>
+                <li>(Revenge) Training Arc 🦍</li>
+                <li>Lidia 🤝 Emily</li>
+                <li>Frah Quintale Mix</li>
+                <li>Francesco Guccini Mix</li>
+                <li>Lo Stato Sociale Mix</li>
+                <li>Strive School > The Hunt Motivation</li>
+                <li>mi stavo dimenticando (mar-apr 2021)</li>
+                <li>high school musical 1,2,3</li>
+                <li>quanto trash</li>
+                <li>The 2020 Playlist</li>
+                <li>An Emily Winchester kind of mood 🔪🖕</li>
+                <li>Musical 2022</li>
+                <li>Be the young</li>
+                <li>'...' cit. Kimiko (lug-ago 2022)</li>
+                <li>saggio vibes 💃🩰</li>
+                <li>main character energy (mag-giu 2022)</li>
+                <li>VEE, CARLOTTA E GIACOMO VANNO A BOSIO</li>
+                <li>landing page (mar-apr 2022)</li>
+                <li>2021 lol</li>
+                <li>honey and glass (nov-dic 2021)</li>
+                <li>(Revenge) Training Arc 🦍</li>
+                <li>Lidia 🤝 Emily</li>
+                <li>Frah Quintale Mix</li>
+                <li>Francesco Guccini Mix</li>
+                <li>Lo Stato Sociale Mix</li>
+                <li>Strive School > The Hunt Motivation</li>
+                <li>mi stavo dimenticando (mar-apr 2021)</li>
+                <li>high school musical 1,2,3</li>
+                <li>quanto trash</li>
+                <li>The 2020 Playlist</li>
+                
+              </ul>
+            </div>
           </div>
-        <hr class="riga_nav">
-      </div>
-    </div>
-
+        </div>
 
       <!-- body -->
       
       <div class="col-8  " id="body_home">
         <div class="col mt-3 ">
-        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="30" fill="currentColor" class="bi bi-caret-left icon-background" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-left icon-background " viewBox="0 0 16 16">
           <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
         </svg>
       
-        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="30" fill="currentColor" class="bi bi-caret-right icon-background" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-right icon-background" viewBox="0 0 16 16">
           <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
         </svg>
       </div>
@@ -259,40 +361,43 @@
             </div>
             <div class="col">
               <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                    additional content.</p>
+                  <p class="card-text">
+                    This is a longer card with supporting text below as a
+                    natural lead-in to additional content.
+                  </p>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="..." class="card-img-top" alt="..." />
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
+                  <p class="card-text">
+                    This is a longer card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
+                  </p>
                 </div>
               </div>
             </div>
-              <div class="col">
-                <div class="card h-100">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                      additional content.</p>
-                  </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="..." class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a longer card with supporting text below as a
+                    natural lead-in to additional content.
+                  </p>
                 </div>
               </div>
             </div>
-          
-      </div>
-      
-
-
+          </div>
+        </div>
 
           <!-- side navbar dx -->
           <div class="col-1 bg-danger" id="navDx">
@@ -300,14 +405,88 @@
           </div>
         </div>
       </div>
-
+      <!-- footer -->
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12 bg-warning position-fixed">
-            <h2>FOOTER</h2>
-          </div>
+          <div class="col-12 bg-dark position-fixed d-flex text-white">
+            <div class="d-flex align-items-center col-2">
+              <img src="https://hips.hearstapps.com/hmg-prod/images/cos-e-questa-storia-che-damiano-dei-maneskin-interpretera-paul-newman-al-cinema-1640252143.jpg" alt="" class="img-fluid p-3" width="90px">
+              <div>
+                <div>Artista</div>
+                <div>Nome canzone</div>
+              </div>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                  </svg>
+              </div>
+            </div>
+            <div class="col-8 text-center my-auto">
+              <div>
+                <button class="bg-dark border-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" class="bi bi-shuffle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5"/>
+                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                  </svg>
+                </button>
+                <button class="bg-dark border-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-skip-start-fill" viewBox="0 0 16 16">
+                    <path d="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5 0 0 1-1 0z"/>
+                  </svg>
+                </button>
+                <button class="bg-dark border-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-play-circle-fill " viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"></path>
+                      </svg>
+                </button>
+                <button class=" bg-dark border-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-skip-end-fill" viewBox="0 0 16 16">
+                        <path d="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5 0 0 0 1 0z"/>
+                      </svg>
+                </button>
+                <button class="bg-dark border-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" class="bi bi-repeat" viewBox="0 0 16 16">
+                        <path d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192Zm3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z"/>
+                      </svg>
+                </button>
+              </div>
+              <div>
+                <input type="range" value="0" min="0" max="100" class="w-50" >
+              </div>
+            </div>
+            <div class="d-flex align-items-center col-2">
+              <div class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic-fill" viewBox="0 0 16 16">
+                    <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0z"/>
+                    <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5"/>
+                  </svg>
+              </div>
+              <div class="px-2"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-menu-button-wide" viewBox="0 0 16 16">
+                    <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v2A1.5 1.5 0 0 1 14.5 5h-13A1.5 1.5 0 0 1 0 3.5zM1.5 1a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5z"/>
+                    <path d="M2 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m10.823.323-.396-.396A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5"/>
+                  </svg>
+              </div>
+              <div class="px-2"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pc-display" viewBox="0 0 16 16">
+                <path d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1zm1 13.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0m2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0M9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5M1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2z"/>
+              </svg>
+             </div>
+              <div class="px-2"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-volume-down-fill" viewBox="0 0 16 16">
+                <path d="M9 4a.5.5 0 0 0-.812-.39L5.825 5.5H3.5A.5.5 0 0 0 3 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 9 12zm3.025 4a4.486 4.486 0 0 1-1.318 3.182L10 10.475A3.489 3.489 0 0 0 11.025 8 3.49 3.49 0 0 0 10 5.525l.707-.707A4.486 4.486 0 0 1 12.025 8"/>
+              </svg>
+            </div>
+              <input type="range" max="100" min="0">
+           
+            <div class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-angle-expand" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707"/>
+                  </svg>
+            </div> 
         </div>
-      </div>
+        </div>
+    </div>     
   
 
 

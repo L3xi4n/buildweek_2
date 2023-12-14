@@ -7,8 +7,12 @@
   fill: rgb(0, 227, 15);
 }
 
-.riga_nav{
-  color: grey;
+ul{
+  list-style: none;
+}
+.scrollbar_home > ul{
+overflow-y: scroll;
+height: 700px;
 }
 
 #navSx {
