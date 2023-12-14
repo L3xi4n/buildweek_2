@@ -16,7 +16,7 @@
 }
 
 #body_home {
-  background-color: #171717;
+  background-color: #212121;
   width: 74%;
 }
 
@@ -33,4 +33,18 @@
 
 .titoliBody {
   color: white;
+}
+
+#btnPlay {
+  background-color: #1ED760;
+  border: 1px solid #1ED760 !important;
+}
+
+#btnSave {
+  background-color: #000000;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+#cardGrande {
+  background-color: #141414;
 }/*# sourceMappingURL=home.css.map */
