@@ -11862,7 +11862,6 @@ textarea.form-control-lg {
 }
 body {
   font-family: "Roboto", sans-serif;
-  color: white !important;
 }
 
 .cuoricino_nav {
@@ -11900,6 +11899,7 @@ body {
 #body_home {
   background-color: #212121;
   width: 74%;
+  color: aliceblue;
 }
 
 #navDx {
