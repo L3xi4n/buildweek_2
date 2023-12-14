@@ -11864,6 +11864,35 @@ textarea.form-control-lg {
   fill: rgb(0, 227, 15);
 }
 
-.riga_nav {
-  color: grey;
+ul {
+  list-style: none;
+}
+
+.scrollbar_home > ul {
+  overflow-y: scroll;
+  height: 700px;
+}
+
+#navSx {
+  width: 15%;
+}
+
+#body_home {
+  background-color: #171717;
+  width: 74%;
+}
+
+#navDx {
+  width: 11%;
+}
+
+.icon-background {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 80%;
+  padding: 5px;
+}
+
+.titoliBody {
+  color: white;
 }/*# sourceMappingURL=style.css.map */
