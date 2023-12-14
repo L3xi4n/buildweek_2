@@ -12,26 +12,76 @@ const arrayRecenti = [];
 
 const arrayPiuAscoltati = [];
 
-albumMixPreferiti.forEach((el) => {
-    fetch(url + el)
+window.onload = function() {
+    document.getElementById("mixPreferiti").innerHTML ="" 
+    
+};
+
+albumMixPreferiti.forEach((id) => {
+    fetch(url + id)
       .then((response) => response.json())
-      .then(data => arrayMixPreferiti.push(data));
+      .then(data => {cardsMixPreferiti(data,"mixPreferiti")});    
 });
 
-console.log(arrayMixPreferiti);
 
-albumRecenti.forEach((el) => {
-    fetch(url + el)
+
+albumRecenti.forEach((id) => {
+    fetch(url + id)
      .then((response) => response.json())
-     .then(data => arrayRecenti.push(data));
+     .then(data => { cardsMixPreferiti(data,"recenti")});   
 });
 
-console.log(arrayRecenti);
 
-albumPiuAscoltati.forEach((el) => {
-    fetch(url + el)
+
+albumPiuAscoltati.forEach((id) => {
+    fetch(url + id)
     .then((response) => response.json())
-    .then(data => arrayPiuAscoltati.push(data));
+    .then(data => { cardsMixPreferiti(data,"piuAscoltati"); cardsBuongiorno(data)});
+
 });
 
-console.log(arrayPiuAscoltati);
+
+
+
+function cardsMixPreferiti(album,rowId){
+    console.log(album);
+    const cardsPreferiti = document.getElementById(rowId);
+    
+    console.log("sotto c'e il console della funzione");
+    console.log(arrayMixPreferiti);
+
+    cardsPreferiti.innerHTML += `
+    <div class=" col-xs-12  col-sm-6 col-md-4 col-lg-2 ">
+    <div class="card h-100">
+        <img src="${album.cover}" class="card-img-top px-1" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">${album.title}</h5>
+            <p class="card-text">${album.artist.name}</p>
+        </div>
+    </div>
+    </div>`
+}
+
+
+
+function cardsBuongiorno(album){
+    const cardsBuongiorno = document.getElementById("cardBuongiorno");
+    
+    cardsBuongiorno.innerHTML += `
+    <div class="col-4 my-2">
+    <div class="card col-12">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="${album.cover}" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">${album.title}</h5>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>`
+}
+  

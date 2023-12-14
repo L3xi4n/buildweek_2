@@ -241,12 +241,15 @@
             <div class="col-md-2">
               <img src="./psy.jpg" class="img-fluid rounded-start mx-3 my-4" alt="..." >
             </div>
-            <div class="col-md-10">
+            <div class="col-md-10 text-white">
               <div class="card-body">
                 <h5 class="card-title">album</h5>
                 <p class="card-text"></p>
-                <button type="button" class="btn btn-success text-dark border rounded-5 px-4" id="btnPlay">Play</button>
-                <button type="button" class="btn btn-dark border border-white rounded-5 px-4" id="btnSave">Salva</button>
+                <div class="display-2 fw-bold">Aaaa</div>
+                <div></div><!--  nome artista -->
+                <div>Ascolta il nuovo singolo di</div> <!--  nome artista -->
+                <button type="button" class="btn btn-success text-dark border rounded-5 px-4 py-2 fw-bold" id="btnPlay">Play</button>
+                <button type="button" class="btn btn-dark border border-white rounded-5 px-4 py-2" id="btnSave">Salva</button>
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="18" fill="currentColor" id="icon" class="bi bi-three-dots" viewBox="0 0 16 16">
                   <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
                 </svg>
@@ -254,12 +257,15 @@
             </div>
           </div>
         </div>
-        <h3 class="titoliBody">Buonasera</h3>
+        <h3 class="titoliBody">Buongiorno</h3>
+        <div class="row" id="cardBuongiorno">
 
+        </div>
 
         <!-- Le 6 CARD  -->
-        <div class="row g-3">
-
+        
+          
+<!--  
           <div class="col-4 ">
           <div class="card col-12">
             <div class="row g-0">
@@ -356,11 +362,12 @@
           </div>
         </div>
 
-        </div>
+        </div> -->
 
-        <h3 class="titoliBody">Altro di ciò che ti piace</h3>
-
-        <div class="row g-4">
+        <h3 class="titoliBody">Canzoni Preferite</h3>
+        <div class="row g-3 my-2" id="mixPreferiti">
+        </div>  
+        <!-- <div class="row g-4">
           <div class="col">
             <div class="card h-100">
               <img src="..." class="card-img-top" alt="...">
@@ -415,9 +422,15 @@
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
+            </div> -->
+          
+          <h3 class="titoliBody">Canzoni Recenti</h3>
+          <div class="row g-3" id="recenti"></div>
+          
+
+          <h3 class="titoliBody">Canzoni Più Ascoltate</h3>
+          <div class="row g-3" id="piuAscoltati"></div>
+        </div> 
 
           <!-- side navbar dx -->
        
