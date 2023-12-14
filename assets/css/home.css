@@ -20,7 +20,7 @@ body {
 
 .scrollbar_home > ul {
   overflow-y: scroll;
-  height: 700px;
+  height: 2000px;
 }
 
 #hr_home {
@@ -38,7 +38,6 @@ body {
 #body_home {
   background-color: #212121;
   width: 74%;
-  color: aliceblue;
 }
 
 #navDx {
