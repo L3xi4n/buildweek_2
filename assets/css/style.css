@@ -11875,6 +11875,14 @@ textarea.form-control-lg {
   height: 700px;
 }
 
+#hr_home {
+  border: none;
+  border-top: 1.7px solid gray;
+  height: 0;
+  width: 90%;
+  margin-left: 0.5rem;
+}
+
 #navSx {
   width: 15%;
 }
