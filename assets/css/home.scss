@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
 .cuoricino_nav{
   background: linear-gradient(150deg, rgba(69,30,181,1) 1%, rgba(206,189,255,1) 78%, rgba(208,241,220,1) 100%);
 }
@@ -30,7 +37,7 @@ height: 700px;
 }
 
 #body_home{
-  background-color: #171717;
+  background-color: #212121;
   width: 74%;
 }
 
@@ -39,7 +46,7 @@ height: 700px;
 }
 
 .icon-background {
-  background-color: rgb(0, 0, 0);
+  background-color: #131313;
   color: white;
   border-radius: 80%; 
       padding: 5px; 
@@ -47,4 +54,23 @@ height: 700px;
 
 .titoliBody {
   color: white;
+}
+
+#btnPlay {
+  background-color: #1ED760;
+  border: 1px solid #1ED760 !important;
+}
+
+#btnSave {
+  background-color: #000000;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+#cardGrande {
+  background-color: #141414;
+  
+}
+
+#icon {
+  color: rgb(255, 255, 255);
 }

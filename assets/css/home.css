@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  color: white !important;
+}
+
 .cuoricino_nav {
   background: linear-gradient(150deg, rgb(69, 30, 181) 1%, rgb(206, 189, 255) 78%, rgb(208, 241, 220) 100%);
 }
@@ -31,7 +37,7 @@
 }
 
 #body_home {
-  background-color: #171717;
+  background-color: #212121;
   width: 74%;
 }
 
@@ -40,7 +46,7 @@
 }
 
 .icon-background {
-  background-color: rgb(0, 0, 0);
+  background-color: #131313;
   color: white;
   border-radius: 80%;
   padding: 5px;
@@ -48,4 +54,22 @@
 
 .titoliBody {
   color: white;
+}
+
+#btnPlay {
+  background-color: #1ED760;
+  border: 1px solid #1ED760 !important;
+}
+
+#btnSave {
+  background-color: #000000;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+#cardGrande {
+  background-color: #141414;
+}
+
+#icon {
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=home.css.map */
