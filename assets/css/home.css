@@ -7,13 +7,23 @@
   fill: rgb(0, 227, 15);
 }
 
-ul {
+#listNavSx_home {
   list-style: none;
+  padding: 1rem;
+  margin-bottom: 0;
 }
 
 .scrollbar_home > ul {
   overflow-y: scroll;
   height: 700px;
+}
+
+#hr_home {
+  border: none;
+  border-top: 1.7px solid gray;
+  height: 0;
+  width: 90%;
+  margin-left: 0.5rem;
 }
 
 #navSx {
