@@ -4,6 +4,7 @@
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11859,6 +11860,11 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  font-family: "Roboto", sans-serif;
+  color: white !important;
+}
+
 .cuoricino_nav {
   background: linear-gradient(150deg, rgb(69, 30, 181) 1%, rgb(206, 189, 255) 78%, rgb(208, 241, 220) 100%);
 }
