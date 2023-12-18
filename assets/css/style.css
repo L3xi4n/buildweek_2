@@ -11876,6 +11876,11 @@ body {
   margin-bottom: 0;
 }
 
+#listNavSx_home > li {
+  padding: 0.4rem 0 0.4rem 0;
+  font-size: 14px;
+}
+
 .scrollbar_home > ul {
   overflow-y: scroll;
   height: 2000px;
@@ -11924,11 +11929,25 @@ body {
 }
 
 #cardGrande {
-  background-color: #141414;
+  background: linear-gradient(42deg, rgb(0, 0, 0) 0%, rgb(18, 18, 18) 20%, rgb(33, 33, 33) 100%);
+  border: none;
 }
 
 #icon {
   color: rgb(255, 255, 255);
+}
+
+.cardBuongiorno {
+  background-color: #2d2d2d;
+  border: none;
+}
+
+.cardPopolo {
+  background-color: #171717;
+}
+
+.coversAlbumsHome {
+  border-radius: 20px;
 }
 
 body {
