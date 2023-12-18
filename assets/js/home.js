@@ -33,8 +33,6 @@ albumRecenti.forEach((id) => {
     });
 });
 
-
-
 albumPiuAscoltati.forEach((id) => {
   fetch(url + id)
     .then((response) => response.json())
