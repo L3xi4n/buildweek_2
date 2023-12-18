@@ -53,6 +53,7 @@
 
                 <!-- search -->
                 <li>
+                  <button class="bg-black border border-0" id="btnSearch" onclick="search(true)">  
                   <div class="text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -68,6 +69,7 @@
                     </svg>
                     Cerca
                   </div>
+                </button>
                 </li>
 
                 <!-- library -->
@@ -222,82 +224,46 @@
           </div>
         </div>
 
-        <!-- body -->
+      <!-- body -->
+      
+      <div class="col-8  " id="body_home">
+        <div class="d-flex gap-3 mt-4 align-items-center">
+        <div class="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-left icon-background " viewBox="0 0 16 16">
+          <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+        </svg>
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-right icon-background" viewBox="0 0 16 16">
+          <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+        </svg>
+      </div>
+    
+      <div id="contenitoreSearch">
+      <!-- <form class="d-flex d-none" role="search" id="searchBar">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+    </div>
 
-        <div class="col-8" id="body_home">
-          <div class="col mt-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              fill="currentColor"
-              class="bi bi-caret-left icon-background"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"
-              />
-            </svg>
 
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              fill="currentColor"
-              class="bi bi-caret-right icon-background"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"
-              />
-            </svg>
-          </div>
-          <div class="card mb-3 mt-4" id="cardGrande">
-            <div class="row g-0">
-              <div class="col-md-2">
-                <img
-                  src="./psy.jpg"
-                  class="img-fluid rounded-start mx-3 my-4"
-                  alt="..."
-                />
-              </div>
-              <div class="col-md-10 text-white">
-                <div class="card-body">
-                  <h5 class="card-title">album</h5>
-                  <p class="card-text"></p>
-                  <div class="display-2 fw-bold">Aaaa</div>
-                  <div></div>
-                  <!--  nome artista -->
-                  <div>Ascolta il nuovo singolo di</div>
-                  <!--  nome artista -->
-                  <button
-                    type="button"
-                    class="btn btn-success text-dark border rounded-5 px-4 py-2 fw-bold"
-                    id="btnPlay"
-                  >
-                    Play
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-dark border border-white rounded-5 px-4 py-2"
-                    id="btnSave"
-                  >
-                    Salva
-                  </button>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="50"
-                    height="18"
-                    fill="currentColor"
-                    id="icon"
-                    class="bi bi-three-dots"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
-                    />
-                  </svg>
-                </div>
+    </div>
+        <div class="card mb-3 mt-4" id="cardGrande">
+          <!-- <div class="row g-0">
+            <div class="col-md-2">
+              <img src="./psy.jpg" class="img-fluid rounded-start mx-3 my-4" alt="..." >
+            </div>
+            <div class="col-md-10 text-white">
+              <div class="card-body">
+                <h5 class="card-title">album</h5>
+                <p class="card-text"></p>
+                <div class="display-2 fw-bold">Aaaa</div>
+                <div></div>
+                <div>Ascolta il nuovo singolo di</div> 
+                <button type="button" class="btn btn-success text-dark border rounded-5 px-4 py-2 fw-bold" id="btnPlay">Play</button>
+                <button type="button" class="btn btn-dark border border-white rounded-5 px-4 py-2" id="btnSave">Salva</button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="18" fill="currentColor" id="icon" class="bi bi-three-dots" viewBox="0 0 16 16">
+                  <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                </svg>
               </div>
             </div>
           </div>
@@ -391,21 +357,12 @@
                   d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708"
                 ></path>
               </svg>
-            </div>
-            <!-- chiude navbar -->
-            <div class="text-light d-flex justify-content-between px-1">
-              <!-- apre activita -->
-              <div class="h6">Actività amici</div>
-              <div>
-                <!-- apre activita img -->
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-person-fill-add"
-                  viewBox="0 0 16 16"
-                >
+            </div><!-- chiude navbar -->
+            <div class=" text-light d-flex justify-content-between px-1"><!-- apre activita -->
+              <div class="h6">Attività amici</div>
+              <div> <!-- apre activita img -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-person-fill-add" viewBox="0 0 16 16">
                   <path
                     d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"
                   />
