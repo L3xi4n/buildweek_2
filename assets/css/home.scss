@@ -19,9 +19,22 @@ body {
   padding: 1rem;
   margin-bottom: 0;
 }
+
+// ::-webkit-scrollbar {
+//   width: 10px;
+// }
+// ::-webkit-scrollbar-track {
+//   background: #f1f1f1; 
+// }
+// ::-webkit-scrollbar-thumb {
+//   background: #888; 
+// }
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #555;
+// }
 .scrollbar_home > ul{
 overflow-y: scroll;
-height: 700px;
+height: 2000px;
 }
 
 #hr_home{

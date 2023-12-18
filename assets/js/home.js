@@ -1,56 +1,49 @@
 const url = "https://striveschool-api.herokuapp.com/api/deezer/album/";
 
-const albumMixPreferiti = [384842207, 76311092, 508204251,721846,721845,721843 ];
+const albumMixPreferiti = [
+  384842207, 76311092, 508204251, 721846, 721845, 721843,
+];
 
-const albumRecenti = [721833,1329897,1329898,1329889,81763,68346981];
+const albumRecenti = [721833, 1329897, 1329898, 1329889, 81763, 68346981];
 
-const albumPiuAscoltati = [664237,70874562, 86773062, 71624, 345122517,302204417];
+const albumPiuAscoltati = [
+  664237, 70874562, 86773062, 71624, 345122517, 302204417,
+];
 
-const arrayMixPreferiti = [];
-
-const arrayRecenti = [];
-
-const arrayPiuAscoltati = [];
-
-window.onload = function() {
-    document.getElementById("mixPreferiti").innerHTML ="" 
-    
+window.onload = function () {
+  document.getElementById("mixPreferiti").innerHTML = "";
 };
 
 albumMixPreferiti.forEach((id) => {
-    fetch(url + id)
-      .then((response) => response.json())
-      .then(data => {cardsMixPreferiti(data,"mixPreferiti")});    
+  fetch(url + id)
+    .then((response) => response.json())
+    .then((data) => {
+      cardsMixPreferiti(data, "mixPreferiti");
+    });
 });
-
-
 
 albumRecenti.forEach((id) => {
-    fetch(url + id)
-     .then((response) => response.json())
-     .then(data => { cardsMixPreferiti(data,"recenti")});   
+  fetch(url + id)
+    .then((response) => response.json())
+    .then((data) => {
+      cardsMixPreferiti(data, "recenti");
+    });
 });
-
-
 
 albumPiuAscoltati.forEach((id) => {
-    fetch(url + id)
+  fetch(url + id)
     .then((response) => response.json())
-    .then(data => { cardsMixPreferiti(data,"piuAscoltati"); cardsBuongiorno(data)});
-
+    .then((data) => {
+      cardsMixPreferiti(data, "piuAscoltati");
+      cardsBuongiorno(data);
+    });
 });
 
+function cardsMixPreferiti(album, rowId) {
+  console.log(album);
+  const cardsPreferiti = document.getElementById(rowId);
 
-
-
-function cardsMixPreferiti(album,rowId){
-    console.log(album);
-    const cardsPreferiti = document.getElementById(rowId);
-    
-    console.log("sotto c'e il console della funzione");
-    console.log(arrayMixPreferiti);
-
-    cardsPreferiti.innerHTML += `
+  cardsPreferiti.innerHTML += `
     <div class=" col-xs-12  col-sm-6 col-md-4 col-lg-2 ">
     <div class="card h-100">
         <img src="${album.cover}" class="card-img-top px-1" alt="...">
@@ -59,15 +52,13 @@ function cardsMixPreferiti(album,rowId){
             <p class="card-text">${album.artist.name}</p>
         </div>
     </div>
-    </div>`
+    </div>`;
 }
 
+function cardsBuongiorno(album) {
+  const cardsBuongiorno = document.getElementById("cardBuongiorno");
 
-
-function cardsBuongiorno(album){
-    const cardsBuongiorno = document.getElementById("cardBuongiorno");
-    
-    cardsBuongiorno.innerHTML += `
+  cardsBuongiorno.innerHTML += `
     <div class="col-4 my-2">
     <div class="card col-12">
       <div class="row g-0">
@@ -82,6 +73,5 @@ function cardsBuongiorno(album){
         </div>
       </div>
     </div>
-  </div>`
+  </div>`;
 }
-  
