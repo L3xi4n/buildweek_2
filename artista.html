@@ -203,7 +203,9 @@
 
         <!-- body -->
 
-        <div class="col-8" id="body_home">
+        <!-- frecce di navigazione -->
+
+        <div class="col-8" id="body_artist">
           <div class="col mt-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -231,7 +233,87 @@
               />
             </svg>
           </div>
+
+          <!-- display artista -->
+          <div class="text-white">
+            <div>
+              <div class="verificato">Artista verificato</div>
+              <div class="nome_artista">Nome artista</div>
+              <div class="ascoltatori_mensili">
+                3.433.158 ascoltatori mensili
+              </div>
+            </div>
+<!-- bottoni -->
+            <div class="buttons">
+              <button class="" id="play_button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                  <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                </svg>
+              </button>
+              <button id="follow_button">FOLLOWING</button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50"
+                height="18"
+                fill="currentColor"
+                id="icon"
+                class="bi bi-three-dots"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
+                />
+              </svg>
+            </div>
+          </div>
+<!-- canzoni -->
+          <div class="row text-white">
+            <h5 class="col-8">Popolari</h5>
+            <h5 class="col-4">Brani che ti piacciono</h5>
+          </div>
+          <div class="contenitore_body row">
+              <div class="col-7 card_popolari">
+                <div class="card">
+                  <div class="row g-0">
+                    <div class="col-md-2">
+                      <img src="" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <div class="row">
+                        <h5 class="card-title col-4">Card title</h5>
+                        <h5 class="card-views col-4">Card views</h5>
+                        <h5 class="card-duration col-4">Card duration</h5>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+<!-- Brani che ti piacciono -->
+            <div class="col-4">
+                <div class="card col-12">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Hai messo mi piace a 11 brani</h5>
+                        <p>Di artista</p>
+                        <small></small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <small class="text-white">VISUALIZZA ALTRO</small>
         </div>
+
+
+
+        <!-- navbar dx -->
         <div class="col-2 px-0 p-1 bg-black" id="navDx">
           <!-- apre col-espi -->
           <div class="bg-black">
@@ -411,6 +493,7 @@
         <!-- chiude col espi -->
       </div>
     </div>
+
     <!-- footer -->
     <div class="container-fluid px-0 fixed-bottom">
       <div class="col-12 bg-dark d-flex text-white">
@@ -602,5 +685,7 @@
         </div>
       </div>
     </div>
+
+    <script src="assets/js/artista.js"></script>
   </body>
 </html>
