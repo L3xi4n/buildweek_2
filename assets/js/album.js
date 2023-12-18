@@ -1,8 +1,8 @@
 const url = "https://striveschool-api.herokuapp.com/api/deezer/album/";
-function createAlbum() {
+function createAlbum(id) {
     const url2 = new URLSearchParams(window.location.search);
     const albumId = url2.get("id");
-    const albumUrl = `${url}${albumId}`
+    const albumUrl = `${url}${albumId}`;
     fetch(albumUrl)
     .then((response) => response.json())
     .then((data) =>{ detailsAlbum(data)})
