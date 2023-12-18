@@ -1,5 +1,5 @@
 const url = "https://striveschool-api.herokuapp.com/api/deezer/album/";
-function createAlbum(id) {
+function createAlbum() {
     const url2 = new URLSearchParams(window.location.search);
     const albumId = url2.get("id");
     const albumUrl = `${url}${albumId}`;
@@ -26,4 +26,8 @@ function detailsAlbum(album) {
       </svg>
     </div>
   </div>`
+}
+ 
+window.onload = () => {
+createAlbum()
 }
