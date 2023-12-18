@@ -52,13 +52,16 @@ function cardsMixPreferiti(album, rowId) {
     <div class="card h-100">
         <img src="${album.cover}" class="card-img-top px-1" alt="...">
         <div class="card-body">
-            <h5 class="card-title">${album.title}</h5>
+           <a  class="text-decoration-none" href ="../../album.html" onclick="onAlbum('${album.id}')"><h5 class="card-title">${album.title}</h5></a> 
             <p class="card-text">${album.artist.name}</p>
         </div>
     </div>
     </div>`;
 }
 
+const onAlbum = (id) => {
+  window.location.assign("../../album.html?id=" + id);
+};
 function cardsBuongiorno(album) {
   const cardsBuongiorno = document.getElementById("cardBuongiorno");
 
