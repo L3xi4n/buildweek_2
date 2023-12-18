@@ -11,8 +11,9 @@ const albumPiuAscoltati = [
 ];
 
 window.onload = function () {
-  document.getElementById("mixPreferiti").innerHTML = "";
+  document.getElementById("mixPreferiti").innerHTML = ""; 
 };
+cardGrande(1329897);
 
 albumMixPreferiti.forEach((id) => {
   fetch(url + id)
@@ -42,7 +43,6 @@ albumPiuAscoltati.forEach((id) => {
 });
 
 function cardsMixPreferiti(album, rowId) {
-  console.log(album);
   const cardsPreferiti = document.getElementById(rowId);
 
   cardsPreferiti.innerHTML += `
@@ -104,4 +104,14 @@ function cardGrande(album) {
   })
 }
 
-cardGrande(1329897);
+function search(si) {
+  const search = document.getElementById("contenitoreSearch");
+  if (si){
+    search.innerHTML = `<form class="d-flex " role="search" id="searchBar">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>`
+  } else {
+    search.innerHTML = "";
+  }
+}

@@ -54,6 +54,7 @@
 
                 <!-- search -->
                 <li>
+                  <button class="bg-black border border-0" id="btnSearch" onclick="search(true)">  
                   <div class="text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -69,6 +70,7 @@
                     </svg>
                     Cerca
                   </div>
+                </button>
                 </li>
 
                 <!-- library -->
@@ -229,7 +231,8 @@
       <!-- body -->
       
       <div class="col-8  " id="body_home">
-        <div class="col mt-3 ">
+        <div class="d-flex gap-3 mt-4 align-items-center">
+        <div class="">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-left icon-background " viewBox="0 0 16 16">
           <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
         </svg>
@@ -238,6 +241,16 @@
           <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
         </svg>
       </div>
+    
+      <div id="contenitoreSearch">
+      <!-- <form class="d-flex d-none" role="search" id="searchBar">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+    </div>
+
+
+    </div>
         <div class="card mb-3 mt-4" id="cardGrande">
           <!-- <div class="row g-0">
             <div class="col-md-2">
