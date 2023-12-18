@@ -209,17 +209,96 @@
   
         <!-- body -->
         
-        <div class="col-8  " id="body_home">
-          <div class="col mt-3 ">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-left icon-background " viewBox="0 0 16 16">
-            <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
-          </svg>
+        <div class="col-8  bg-dark" id="body_home">
+          
+            <div class="col mt-3 ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-left icon-background " viewBox="0 0 16 16">
+                <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+              </svg>
+            
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-right icon-background" viewBox="0 0 16 16">
+                <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+              </svg>
+          </div>
+          
+          <!-- card principale album -->
+          <div class="row g-0 bg-warning">
+            <div class="col-md-2">
+              <img src="${data.cover}" class="img-fluid rounded-start mx-3 my-4" alt="..." >
+            </div>
+            <div class="col-md-10 text-white">
+              <div class="card-body">
+                <div class="display-2 fw-bold">${data.title}</div>
+                <div> ${data.artist.name}</div>
+                <div>Ascolta il nuovo singolo di ${data.artist.name}</div> 
+                <button type="button" class="btn btn-success text-dark border rounded-5 px-4 py-2 fw-bold" id="btnPlay">Play</button>
+                <button type="button" class="btn btn-dark border border-white rounded-5 px-4 py-2" id="btnSave">Salva</button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="18" fill="currentColor" id="icon" class="bi bi-three-dots" viewBox="0 0 16 16">
+                  <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                </svg>
+              </div>
+            </div>
+          </div>
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-right icon-background" viewBox="0 0 16 16">
-            <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
-          </svg>
+
+          <!-- corpo album -->
+          <div class="container" >
+            <div class="text-white d-flex align-items-center gap-4 my-3">
+              <div> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="green" class="bi bi-play-circle-fill " viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"></path>
+                </svg>
+              </div>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-heart " viewBox="0 0 16 16">
+                  <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                </svg>
+              </div>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
+                </svg>
+              </div>
+              <div>
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="white"
+                class="bi bi-three-dots"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
+                />
+              </svg>
+              </div>
+            </div>
+
+            <!-- inizio tabella -->
+            <div >
+              <table class="table table-borderless table-dark ">
+                <thead>
+                  <tr class="border border-bottom">
+                    <th class=" numberTable" style="width: 5%">#</th>
+                    <th style="width: 55%">Titolo</th>
+                    <th class="d-flex justify-content-end" style="width: 30%">Riproduzioni</th>
+                    <th style="width: 10%" class="text-center ">🕐</th>
+                  </tr>
+                </thead>
+                <tbody >
+                  <tr>
+                    <th scope="row" class="numberTable">1</th>
+                    <td>Mark</td>
+                    <td class="d-flex justify-content-end" style="width: 30%">Otto</td>
+                    <td >@mdo</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
-        </div>
+        
         <div class="col-2 px-0 p-1 bg-black"id="navDx"><!-- apre col-espi -->
             <div class="bg-black"><!-- apre container navbar  -->
               <div class=" d-flex justify-content-end text-light gap-1"><!-- apre navbar -->
