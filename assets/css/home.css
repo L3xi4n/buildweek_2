@@ -1,46 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   height: 100px !important;
 }
 
-// home page
-.cuoricino_nav{
-  background: linear-gradient(150deg, rgba(69,30,181,1) 1%, rgba(206,189,255,1) 78%, rgba(208,241,220,1) 100%);
+.cuoricino_nav {
+  background: linear-gradient(150deg, rgb(69, 30, 181) 1%, rgb(206, 189, 255) 78%, rgb(208, 241, 220) 100%);
 }
 
-.bookmark_nav{
+.bookmark_nav {
   background-color: green;
   fill: rgb(0, 227, 15);
 }
 
-#listNavSx_home{
+#listNavSx_home {
   list-style: none;
   padding: 1rem;
   margin-bottom: 0;
 }
-#listNavSx_home > li{
+
+#listNavSx_home > li {
   padding: 0.4rem 0 0.4rem 0;
   font-size: 14px;
 }
 
-// ::-webkit-scrollbar {
-//   width: 10px;
-// }
-// ::-webkit-scrollbar-track {
-//   background: #f1f1f1; 
-// }
-// ::-webkit-scrollbar-thumb {
-//   background: #888; 
-// }
-// ::-webkit-scrollbar-thumb:hover {
-//   background: #555;
-// }
-.scrollbar_home > ul{ max-height: 800px; 
-  overflow: auto; }
+.scrollbar_home > ul {
+  max-height: 800px;
+  overflow: auto;
+}
 
-#hr_home{
+#hr_home {
   border: none;
   border-top: 1.7px solid gray;
   height: 0;
@@ -52,10 +41,9 @@ body {
   width: 15%;
 }
 
-#body_home{
+#body_home {
   background-color: #212121;
-  width: 74%; 
-  
+  width: 74%;
 }
 
 #nextArrow {
@@ -72,8 +60,6 @@ body {
   overflow-x: hidden;
 }
 
-
-
 #navDx {
   width: 11%;
 }
@@ -81,8 +67,8 @@ body {
 .icon-background {
   background-color: #131313;
   color: white;
-  border-radius: 80%; 
-      padding: 5px; 
+  border-radius: 80%;
+  padding: 5px;
 }
 
 .titoliBody {
@@ -100,7 +86,7 @@ body {
 }
 
 #cardGrande {
-  background: linear-gradient(42deg, rgba(0,0,0,1) 0%, rgba(18,18,18,1) 20%, rgba(33,33,33,1) 100%);
+  background: linear-gradient(42deg, rgb(0, 0, 0) 0%, rgb(18, 18, 18) 20%, rgb(33, 33, 33) 100%);
   border: none;
 }
 
@@ -108,21 +94,15 @@ body {
   color: rgb(255, 255, 255);
 }
 
-.cardBuongiorno{
-background-color: #2d2d2d;
-border: none;
+.cardBuongiorno {
+  background-color: #2d2d2d;
+  border: none;
 }
 
-.cardPopolo{
+.cardPopolo {
   background-color: #171717;
 }
 
-.coversAlbumsHome{
-border-radius: 20px;
-}
-
-
-// artist page
-
-
-// album page
+.coversAlbumsHome {
+  border-radius: 20px;
+}/*# sourceMappingURL=home.css.map */
