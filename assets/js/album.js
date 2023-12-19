@@ -58,6 +58,7 @@ function bgBody(foto){
 const body = document.getElementById("body_home") 
 body.style.backgroundImage = `url('${foto.cover_xl}')`
 body.style.backgroundRepeat = "no-repeat"
+
 }
 
 window.onload = () => {
