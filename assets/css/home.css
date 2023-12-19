@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 body {
   font-family: "Roboto", sans-serif;
+  height: 100px !important;
 }
 
 .cuoricino_nav {
@@ -24,8 +25,8 @@ body {
 }
 
 .scrollbar_home > ul {
-  overflow-y: scroll;
-  height: 2000px;
+  max-height: 800px;
+  overflow: auto;
 }
 
 #hr_home {
@@ -43,6 +44,20 @@ body {
 #body_home {
   background-color: #212121;
   width: 74%;
+}
+
+#nextArrow {
+  cursor: pointer;
+}
+
+#prevArrow {
+  cursor: pointer;
+}
+
+#scrollableSection {
+  max-height: 74%; /* Altezza massima della sezione con barra di scorrimento */
+  overflow: auto; /* Aggiunge una barra di scorrimento quando il contenuto supera l'altezza massima */
+  overflow-x: hidden;
 }
 
 #navDx {

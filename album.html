@@ -205,36 +205,24 @@
 
         <!-- body -->
         
-        <div class="col-8  bg-dark px-0 " id="body_home">
-          <div class="">
-            <div class="col ">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-left icon-background ms-3 mt-3" viewBox="0 0 16 16">
+        <div class="col-8  bg-dark px-0  " id="body_home">
+          
+          <div class=" bg-warning" >
+            <div class="col d-flex gap-3 align-items-center" >
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-left icon-background ms-3 mt-3" viewBox="0 0 16 16" id="prevArrow">
                 <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
               </svg>
             
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-right icon-background mt-3" viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-right icon-background mt-3" viewBox="0 0 16 16" id="nextArrow">
                 <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
               </svg>
             </div>
           
             <!-- card principale album (aggiungere un div contenitore e inserire tutto il codice in js)-->
-            <div class="row g-0 " id="rowAlbum">
-             <!--  <div class="col-md-2">
-                <img src="${data.cover}" class="img-fluid rounded-start mx-3 my-4" alt="..." >
-              </div>
-              <div class="col-md-10 text-white">
-                <div class="card-body">
-                  <div class="display-2 fw-bold">${data.title}</div>
-                  <div> ${data.artist.name}</div>
-                  <div>Ascolta il nuovo singolo di ${data.artist.name}</div> 
-                  <button type="button" class="btn btn-success text-dark border rounded-5 px-4 py-2 fw-bold" id="btnPlay">Play</button>
-                  <button type="button" class="btn btn-dark border border-white rounded-5 px-4 py-2" id="btnSave">Salva</button>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="18" fill="currentColor" id="icon" class="bi bi-three-dots" viewBox="0 0 16 16">
-                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
-                  </svg>
-                </div>
-              </div> -->
+            <div class="row g-0 bg-warning" id="rowAlbum">
+             
             </div>
+          
         </div>
 
           <!-- corpo album -->
@@ -272,9 +260,9 @@
             </div>
 
             <!-- inizio tabella -->
-            <table class="table table-borderless " style="opacity:1;">
+            <table class=" table-borderless w-100 bg-dark opacity-25 text-white">
               <thead>
-                <tr class="border border-bottom">
+                <tr class=" border-bottom col-12">
                   <th class=" numberTable" style="width: 5%">#</th>
                   <th class="col-7">Titolo</th>
                   <th class="col-2 text-center" >Riproduzioni</th>

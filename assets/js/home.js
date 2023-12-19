@@ -72,7 +72,7 @@ function cardsBuongiorno(album) {
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">${album.title}</h5>
+          <a  class="text-decoration-none" href="../../album.html?id=${album.id}"><h5 class="card-title">${album.title}</h5></a> 
             
           </div>
         </div>
@@ -158,3 +158,14 @@ async function ricerca() {
       console.error("Errore durante la ricerca:", error);
   }
 }
+
+
+/* frecce avanti e indietro */
+// Aggiungi un gestore di eventi per le frecce
+document.getElementById('prevArrow').addEventListener('click', function() {
+  window.history.back(); // Torna indietro nella cronologia del browser
+});
+
+document.getElementById('nextArrow').addEventListener('click', function() {
+  window.history.forward(); // Avanti nella cronologia del browser
+});

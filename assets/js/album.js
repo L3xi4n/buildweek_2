@@ -42,11 +42,11 @@ function tableAlbum(tracks){
   let i = 0
   tracks.forEach((track) => {
      tableAlbum.innerHTML += `
-    <tr>
+    <tr class= "text-white">
       <th scope="row" class="numberTable">${i+1}</th>
-      <td>${track.title}</td>
-      <td class="text-center" >${track.rank}</td>
-      <td class="text-center">${track.duration}</td>
+      <td class = "fw-bold">${track.title}</td>
+      <td class="text-center fw-bold" >${track.rank}</td>
+      <td class="text-center fw-bold">${track.duration}</td>
     </tr>
  `
  i++
@@ -58,6 +58,7 @@ function bgBody(foto){
 const body = document.getElementById("body_home") 
 body.style.backgroundImage = `url('${foto.cover_xl}')`
 body.style.backgroundRepeat = "no-repeat"
+body.style.backgroundSize = "300%"
 
 }
 
@@ -65,3 +66,14 @@ window.onload = () => {
 createAlbum()
 
 }
+
+
+/* frecce avanti e indietro */
+// Aggiungi un gestore di eventi per le frecce
+document.getElementById('prevArrow').addEventListener('click', function() {
+  window.history.back(); // Torna indietro nella cronologia del browser
+});
+
+document.getElementById('nextArrow').addEventListener('click', function() {
+  window.history.forward(); // Avanti nella cronologia del browser
+});
