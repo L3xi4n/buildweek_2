@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11875,6 +11876,11 @@ body {
   margin-bottom: 0;
 }
 
+#listNavSx_home > li {
+  padding: 0.4rem 0 0.4rem 0;
+  font-size: 14px;
+}
+
 .scrollbar_home > ul {
   overflow-y: scroll;
   height: 2000px;
@@ -11923,9 +11929,54 @@ body {
 }
 
 #cardGrande {
-  background-color: #141414;
+  background: linear-gradient(42deg, rgb(0, 0, 0) 0%, rgb(18, 18, 18) 20%, rgb(33, 33, 33) 100%);
+  border: none;
 }
 
 #icon {
   color: rgb(255, 255, 255);
+}
+
+.cardBuongiorno {
+  background-color: #2d2d2d;
+  border: none;
+}
+
+.cardPopolo {
+  background-color: #171717;
+}
+
+.coversAlbumsHome {
+  border-radius: 20px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#body_artist {
+  background-color: #212121;
+  width: 74%;
+}
+
+.icon-background {
+  background-color: #131313;
+  color: white;
+  border-radius: 80%;
+  padding: 5px;
+}
+
+#play_button {
+  background-color: #1ED760;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+#follow_button {
+  background: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 20% solid white;
 }/*# sourceMappingURL=style.css.map */
