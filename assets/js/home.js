@@ -6,10 +6,11 @@ const albumMixPreferiti = [
   384842207, 76311092, 508204251, 721846, 721845, 721843,
 ];
 
+
 const albumRecenti = [721833, 1329897, 1329898, 1329889, 81763, 68346981];
 
 const albumPiuAscoltati = [
-  664237, 70874562, 86773062, 71624, 345122517, 302204417,
+  664237, 10966110, 86773062, 71624, 345122517, 302204417,
 ];
 
 window.onload = function () {
@@ -47,11 +48,11 @@ function cardsMixPreferiti(album, rowId) {
 
   cardsPreferiti.innerHTML += `
     <div class=" col-xs-12  col-sm-6 col-md-4 col-lg-2 ">
-    <div class="card h-100">
-        <img src="${album.cover}" class="card-img-top px-1" alt="...">
+    <div class="card h-100 cardPopolo">
+        <img src="${album.cover}" class="card-img-top p-3 coversAlbumsHome" alt="...">
         <div class="card-body">
-           <a  class="text-decoration-none" href="../../album.html?id=${album.id}"><h5 class="card-title">${album.title}</h5></a>
-            <p class="card-text">${album.artist.name}</p>
+           <a  class="text-decoration-none" href="../../album.html?id=${album.id}"><h5 class="card-title text-white">${album.title}</h5></a> 
+            <p class="card-text text-secondary">${album.artist.name}</p>
         </div>
     </div>
     </div>`;
@@ -62,8 +63,8 @@ function cardsBuongiorno(album) {
 
   cardsBuongiorno.innerHTML += `
     <div class="col-4 my-2">
-    <div class="card col-12">
-      <div class="row g-0">
+    <div class="card col-12 border-0 text-white">
+      <div class="row g-0 cardBuongiorno">
         <div class="col-md-4">
           <img src="${album.cover}" class="img-fluid rounded-start" alt="...">
         </div>
