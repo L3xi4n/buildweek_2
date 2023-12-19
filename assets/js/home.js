@@ -57,14 +57,6 @@ function cardsMixPreferiti(album, rowId) {
     </div>`;
 }
 
-
-
-const onAlbum = (id) => {
-  window.location.assign("../../album.html?id=" + id);
-};
-const onAlbum = (id) => {
-  window.location.assign("../../album.html?id=" + id);
-};
 function cardsBuongiorno(album) {
   const cardsBuongiorno = document.getElementById("cardBuongiorno");
 
