@@ -52,30 +52,20 @@
                 </li>
 
                 <!-- search -->
-                <li>
-                  <button
-                    class="bg-black border border-0 p-0 fw-bold"
-                    id="btnSearch"
-                    onclick="search(true)"
-                  >
-                    <div class="text-white">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="30"
-                        height="30"
-                        fill="white"
-                        class="bi bi-search"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
-                        />
-                      </svg>
-                      &nbsp;Cerca
-                    </div>
-                  </button>
-                </li>
-
+               <li>
+                <button class="bg-black border border-0 p-0 fw-bold collapsed" id="btnSearch" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#searchContainer" aria-expanded="false"
+                  aria-controls="searchContainer">
+                  <div class="text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-search"
+                      viewBox="0 0 20 20">
+                      <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+                    &nbsp;Cerca
+                  </div>
+                </button>
+              </li>
                 <!-- library -->
                 <li>
                   <div class="text-white">
@@ -547,6 +537,31 @@
         
       </div>
 
+
+    
+    <!-- Search Modal -->
+    <div class="modal modal-xl fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+
+            <div id="searchCardContainer" class="d-flex flex-wrap gap-2"></div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/home.js"></script>
 </body>
 
