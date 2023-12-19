@@ -51,8 +51,9 @@ function cardsMixPreferiti(album, rowId) {
     <div class="card h-100 cardPopolo">
         <img src="${album.cover}" class="card-img-top p-3 coversAlbumsHome" alt="...">
         <div class="card-body">
-           <a  class="text-decoration-none" href="../../album.html?id=${album.id}"><h5 class="card-title text-white">${album.title}</h5></a> 
-            <p class="card-text text-secondary">${album.artist.name}</p>
+           <a class="text-decoration-none" href="../../album.html?id=${album.id}"><h5 class="card-title text-white">${album.title}</h5></a> 
+           <a class="text-decoration-none text-secondary" href="../../artista.html?id=${album.id}>
+            <p class="card-text">${album.artist.name}</p></a>
         </div>
     </div>
     </div>`;
