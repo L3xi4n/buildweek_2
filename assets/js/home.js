@@ -108,7 +108,9 @@ function onSearch(event) {
 
   const query = event.target.elements.search.value;
 
+  const title = document.getElementById("staticBackdropLabel");
   const container = document.getElementById("searchCardContainer");
+
   container.innerHTML = `
   <div class="text-center">
     <div class="spinner-border" role="status">
@@ -119,6 +121,8 @@ function onSearch(event) {
   fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`)
     .then((response) => response.json())
     .then(({ data }) => {
+
+      title.innerText = `Search for ${query}`;
       container.innerHTML = "";
 
       data?.forEach((item) => {
@@ -126,12 +130,12 @@ function onSearch(event) {
           <div class="card mb-3" style="max-width: 540px;">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="${item?.album?.cover}" class="img-fluid rounded-start" alt="...">
+              <img src="${item.album.cover}" class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">${item?.title}</h5>
-                <p class="card-text">${item?.artist?.name}</p>
+                <h5 class="card-title">${item.title}</h5>
+                <p class="card-text">${item.artist.name}</p>
               </div>
             </div>
           </div>
