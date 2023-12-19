@@ -1,11 +1,19 @@
 const url = "https://striveschool-api.herokuapp.com/api/deezer/album/";
-function createAlbum(id) {
+const tracks =[];
+function createAlbum() {
     const url2 = new URLSearchParams(window.location.search);
     const albumId = url2.get("id");
     const albumUrl = `${url}${albumId}`;
     fetch(albumUrl)
     .then((response) => response.json())
-    .then((data) =>{ detailsAlbum(data)})
+    .then((data) =>{ detailsAlbum(data) 
+      console.log(data)
+      tableAlbum(data.tracks.data) 
+      bgBody(data);
+    })
+   
+    
+    
 }
 
 function detailsAlbum(album) {
@@ -28,6 +36,31 @@ function detailsAlbum(album) {
   </div>`
 }
  
+function tableAlbum(tracks){
+  const tableAlbum = document.getElementById("tabella")
+  tableAlbum.innerHTML = "";
+  let i = 0
+  tracks.forEach((track) => {
+     tableAlbum.innerHTML += `
+    <tr>
+      <th scope="row" class="numberTable">${i+1}</th>
+      <td>${track.title}</td>
+      <td class="text-center" >${track.rank}</td>
+      <td class="text-center">${track.duration}</td>
+    </tr>
+ `
+ i++
+  });
+ 
+}
+
+function bgBody(foto){
+const body = document.getElementById("body_home") 
+body.style.backgroundImage = `url('${foto.cover_xl}')`
+body.style.backgroundRepeat = "no-repeat"
+}
+
 window.onload = () => {
 createAlbum()
+
 }
