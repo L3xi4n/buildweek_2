@@ -19,13 +19,8 @@ function createAlbum() {
 function detailsAlbum(album) {
     const containerAlbum = document.getElementById("rowAlbum");
     containerAlbum.innerHTML= "";
-<<<<<<< HEAD
-    containerAlbum.innerHTML = `<div class="col-md-2">
-    <img src="${album.cover}" class="img-fluid rounded-start mx-3 my-4" alt="..." >
-=======
     containerAlbum.innerHTML = ` <div class="col-md-2">
     <img src="${album.cover}" class="img-fluid  mx-4 my-4 w-100" alt="..." >
->>>>>>> 4f92edc25b684dcc25640631227a3d15eec877ce
   </div>
   <div class="col-md-9 mx-5 text-white my-auto">
 
