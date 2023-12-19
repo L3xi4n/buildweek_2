@@ -1,11 +1,10 @@
 const url = "https://striveschool-api.herokuapp.com/api/deezer/album/";
 let photos = [];
-const urlSearch = "https://striveschool-api.herokuapp.com/api/deezer/search?q="
+const urlSearch = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
 
 const albumMixPreferiti = [
   384842207, 76311092, 508204251, 721846, 721845, 721843,
 ];
-
 
 const albumRecenti = [721833, 1329897, 1329898, 1329889, 81763, 68346981];
 
@@ -14,7 +13,7 @@ const albumPiuAscoltati = [
 ];
 
 window.onload = function () {
-  document.getElementById("mixPreferiti").innerHTML = ""; 
+  document.getElementById("mixPreferiti").innerHTML = "";
 };
 cardGrande(1329897);
 
@@ -81,11 +80,10 @@ function cardsBuongiorno(album) {
 
 function cardGrande(album) {
   fetch(url + album)
-  .then((response) => response.json())
-  .then((data) => {
-
-  const cardGrande = document.getElementById("cardGrande");
-  cardGrande.innerHTML += `<div class="row g-0">
+    .then((response) => response.json())
+    .then((data) => {
+      const cardGrande = document.getElementById("cardGrande");
+      cardGrande.innerHTML += `<div class="row g-0">
   <div class="col-md-2">
     <img src="${data.cover}" class="img-fluid rounded-start mx-3 my-4" alt="..." >
   </div>
@@ -102,57 +100,17 @@ function cardGrande(album) {
     </div>
   </div>
 </div>`;
-  })
+    });
 }
 
-function search(si) {
-  const search = document.getElementById("contenitoreSearch");
-  if (si){
-    search.innerHTML = `<form class="d-flex " role="search" id="searchBar">
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="cerca">
-    <button class="btn btn-outline-success" type="submit" onclick="ricerca()" data-bs-toggle="modal" data-bs-target="#exampleModal">Search</button>
+function onSearch(event) {
+  event.preventDefault();
+  fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${event.target.elements.search.value}`
+  )
+    .then((response) => response.json())
+    .then((data) => {
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-  </form>`
-  } else {
-    search.innerHTML = "";
-  }
-}
-
-
-async function ricerca() {
-  try {
-      const cerca = document.getElementById("cerca").value;
-      const url2 = `${urlSearch}${cerca}`;
-
-      const response = await fetch(url2, {
-      });
-
-      const data = await response.json();
-      photos = data.photos;
-
-      if (photos.length === 0) {
-          // Nessun risultato trovato
-          document.getElementById("risultato").innerText = "Nessun risultato trovato";
-      }
-  } catch (error) {
-      console.error("Errore durante la ricerca:", error);
-  }
+      console.log(data);
+    });
 }
