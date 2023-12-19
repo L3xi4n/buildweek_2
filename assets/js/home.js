@@ -65,14 +65,14 @@ function cardsBuongiorno(album) {
 
   cardsBuongiorno.innerHTML += `
     <div class="col-4 my-2">
-    <div class="card col-12 border-0 text-white">
+    <div class="card col-12 border-0">
       <div class="row g-0 cardBuongiorno">
         <div class="col-md-4">
           <img src="${album.cover}" class="img-fluid rounded-start" alt="...">
         </div>
         <div class="col-md-8">
           <div class="card-body">
-          <a  class="text-decoration-none" href="../../album.html?id=${album.id}"><h5 class="card-title">${album.title}</h5></a> 
+          <a  class="text-decoration-none text-white" href="../../album.html?id=${album.id}"><h5 class="card-title">${album.title}</h5></a> 
             
           </div>
         </div>
