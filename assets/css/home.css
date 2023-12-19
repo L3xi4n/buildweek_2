@@ -2,6 +2,7 @@
 body {
   font-family: "Roboto", sans-serif;
   height: 100px !important;
+  overflow-y: hidden;
 }
 
 .cuoricino_nav {
@@ -57,7 +58,7 @@ body {
 #scrollableSection {
   max-height: 74%; /* Altezza massima della sezione con barra di scorrimento */
   overflow: auto; /* Aggiunge una barra di scorrimento quando il contenuto supera l'altezza massima */
-  overflow-x: hidden;
+  
 }
 
 #navDx {
