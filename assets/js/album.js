@@ -42,11 +42,11 @@ function tableAlbum(tracks){
   let i = 0
   tracks.forEach((track) => {
      tableAlbum.innerHTML += `
-    <tr>
+    <tr class= "text-white">
       <th scope="row" class="numberTable">${i+1}</th>
-      <td>${track.title}</td>
-      <td class="text-center" >${track.rank}</td>
-      <td class="text-center">${track.duration}</td>
+      <td class = "fw-bold">${track.title}</td>
+      <td class="text-center fw-bold" >${track.rank}</td>
+      <td class="text-center fw-bold">${track.duration}</td>
     </tr>
  `
  i++
@@ -58,6 +58,7 @@ function bgBody(foto){
 const body = document.getElementById("body_home") 
 body.style.backgroundImage = `url('${foto.cover_xl}')`
 body.style.backgroundRepeat = "no-repeat"
+body.style.backgroundSize = "300%"
 
 }
 
