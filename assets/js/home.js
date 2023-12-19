@@ -112,7 +112,7 @@ function onSearch(event) {
   const container = document.getElementById("searchCardContainer");
 
   container.innerHTML = `
-  <div class="text-center">
+  <div class="container-fluid text-center">
     <div class="spinner-border" role="status">
     <span class="visually-hidden">Loading...</span>
     </div>
@@ -127,7 +127,7 @@ function onSearch(event) {
 
       data?.forEach((item) => {
         container.innerHTML += `
-          <div class="card mb-3" style="max-width: 540px;">
+          <div class="card mb-3" style="width: 49.6%">
           <div class="row g-0">
             <div class="col-md-4">
               <img src="${item.album.cover}" class="img-fluid rounded-start" alt="...">
