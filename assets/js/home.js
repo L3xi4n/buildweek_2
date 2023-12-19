@@ -111,57 +111,48 @@ function cardGrande(album) {
   })
 }
 
-function search(si) {
-  const search = document.getElementById("contenitoreSearch");
-  if (si){
-    search.innerHTML = `<form class="d-flex " role="search" id="searchBar">
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="cerca">
-    <button class="btn btn-outline-success" type="submit" onclick="ricerca()" data-bs-toggle="modal" data-bs-target="#exampleModal">Search</button>
+function onSearch(event) {
+  event.preventDefault();
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+  const query = event.target.elements.search.value;
+
+  const title = document.getElementById("staticBackdropLabel");
+  const container = document.getElementById("searchCardContainer");
+
+  container.innerHTML = `
+  <div class="container-fluid text-center">
+    <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
     </div>
-  </div>
-</div>
+  </div>`;
 
-  </form>`
-  } else {
-    search.innerHTML = "";
-  }
-}
+  fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`)
+    .then((response) => response.json())
+    .then(({ data }) => {
 
+      title.innerText = `Search for ${query}`;
+      container.innerHTML = "";
 
-async function ricerca() {
-  try {
-      const cerca = document.getElementById("cerca").value;
-      const url2 = `${urlSearch}${cerca}`;
-
-      const response = await fetch(url2, {
+      data?.forEach((item) => {
+        container.innerHTML += `
+          <div class="card mb-3" style="width: 49.6%">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="${item.album.cover}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">${item.title}</h5>
+                <p class="card-text">${item.artist.name}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        `;
       });
-
-      const data = await response.json();
-      photos = data.photos;
-
-      if (photos.length === 0) {
-          // Nessun risultato trovato
-          document.getElementById("risultato").innerText = "Nessun risultato trovato";
-      }
-  } catch (error) {
-      console.error("Errore durante la ricerca:", error);
-  }
+    });
 }
+
 
 
 /* frecce avanti e indietro */
