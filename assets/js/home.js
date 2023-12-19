@@ -45,15 +45,14 @@ albumPiuAscoltati.forEach((id) => {
 
 function cardsMixPreferiti(album, rowId) {
   const cardsPreferiti = document.getElementById(rowId);
-console.log(album.id);
+
   cardsPreferiti.innerHTML += `
     <div class=" col-xs-12  col-sm-6 col-md-4 col-lg-2 ">
     <div class="card h-100 cardPopolo">
         <img src="${album.cover}" class="card-img-top p-3 coversAlbumsHome" alt="...">
-        <div class="card-body">
-           <a class="text-decoration-none" href="../../album.html?id=${album.id}"><h5 class="card-title text-white">${album.title}</h5></a> 
-           <a class="text-decoration-none text-secondary" href="../../artista.html?id=${album.id}">
-            <p class="card-text">${album.artist.name}</p></a>
+        <div class="card-body ">
+           <a  class="text-decoration-none text-white" href="../../album.html?id=${album.id}"><h5 class="card-title text-white">${album.title}</h5></a> 
+            <p class="card-text text-secondary">${album.artist.name}</p>
         </div>
     </div>
     </div>`;
@@ -65,7 +64,7 @@ function cardsBuongiorno(album) {
 
   cardsBuongiorno.innerHTML += `
     <div class="col-4 my-2">
-    <div class="card col-12 border-0">
+    <div class="card col-12 border-0 text-white">
       <div class="row g-0 cardBuongiorno">
         <div class="col-md-4">
           <img src="${album.cover}" class="img-fluid rounded-start" alt="...">
