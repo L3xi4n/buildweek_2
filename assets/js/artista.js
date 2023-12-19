@@ -5,6 +5,8 @@ const url = "https://striveschool-api.herokuapp.com/api/deezer/album/";
 function createArtist() {
   const url2 = new URLSearchParams(window.location.search);
   const artistId = url2.get("id");
+  console.log(url2.toString());
+  console.log(artistId);
   const artistUrl = `${url}${artistId}`
   fetch(artistUrl)
   .then((response) => response.json())
@@ -17,24 +19,25 @@ window.onload = () => {
   createArtist()
   }
 
+
 // funzione per card artista
-function cardArtist(artist) {
-  const containerArtist = document.getElementById("rowArtist");
-  // containerArtist.innerHTML = "";
+function cardArtist(data) {
+  const containerArtist = document.getElementById("rowArtist")
+containerArtist.innerHTML = ""
 containerArtist.innerHTML = `
-<img src="${artist.picture}" class="img-fluid rounded-start mx-3 my-4" alt="..." >
+<img src="${data.artist.picture}" class="img-fluid rounded-start mx-3 my-4" alt="..." >
             <div>
               <div class="verificato">
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="blue" class="bi bi-patch-check-fill" viewBox="0 0 20 20">
                 <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
               </svg>
               Artista verificato</div>
-              <div class="nome_artista">${artist.name}</div>
+              <div class="nome_artista">${data.artist.name}</div>
               <div class="ascoltatori_mensili">
-                ${artist.rank} ascoltatori mensili
+                ${data.fans} ascoltatori mensili
               </div>
             </div>
-<!-- bottoni -->
+
             <div class="buttons">
               <button class="" id="play_button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
