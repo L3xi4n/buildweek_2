@@ -50,8 +50,8 @@ function cardsMixPreferiti(album, rowId) {
     <div class=" col-xs-12  col-sm-6 col-md-4 col-lg-2 ">
     <div class="card h-100 cardPopolo">
         <img src="${album.cover}" class="card-img-top p-3 coversAlbumsHome" alt="...">
-        <div class="card-body">
-           <a  class="text-decoration-none" href="../../album.html?id=${album.id}"><h5 class="card-title text-white">${album.title}</h5></a> 
+        <div class="card-body ">
+           <a  class="text-decoration-none text-white" href="../../album.html?id=${album.id}"><h5 class="card-title text-white">${album.title}</h5></a> 
             <p class="card-text text-secondary">${album.artist.name}</p>
         </div>
     </div>
@@ -71,7 +71,7 @@ function cardsBuongiorno(album) {
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">${album.title}</h5>
+          <a  class="text-decoration-none" href="../../album.html?id=${album.id}"><h5 class="card-title">${album.title}</h5></a> 
             
           </div>
         </div>
