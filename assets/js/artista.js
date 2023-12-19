@@ -1,23 +1,26 @@
 const url = "https://striveschool-api.herokuapp.com/api/deezer/album/";
 
-const tracks =[];
+// const tracks =[];
 
 function createArtist() {
-  const url = new URLSearchParams(window.location.search);
-  const artistId = url.get("id");
+  const url2 = new URLSearchParams(window.location.search);
+  const artistId = url2.get("id");
   const artistUrl = `${url}${artistId}`
   fetch(artistUrl)
   .then((response) => response.json())
+  .then((data) => {cardArtist(data)
+    console.log(data)
+})
   }
 
 window.onload = () => {
-  cardArtist()
+  createArtist()
   }
 
 // funzione per card artista
 function cardArtist(artist) {
   const containerArtist = document.getElementById("rowArtist");
-  containerArtist.innerHTML = "";
+  // containerArtist.innerHTML = "";
 containerArtist.innerHTML = `
 <img src="${artist.picture}" class="img-fluid rounded-start mx-3 my-4" alt="..." >
             <div>
@@ -56,35 +59,35 @@ containerArtist.innerHTML = `
 }
 
 // funzione per displayare le canzoni
-function tableAlbum(tracks){
-  const tableAlbum = document.getElementById("contenitore_body")
-  tableAlbum.innerHTML = "";
-  let i = 0
-  tracks.forEach((track) => {
-     tableAlbum.innerHTML += `
+// function tableAlbum(tracks){
+//   const tableAlbum = document.getElementById("contenitore_body")
+//   tableAlbum.innerHTML = "";
+//   let i = 0
+//   tracks.forEach((track) => {
+//      tableAlbum.innerHTML += `
 
-     <div class="contenitore_body row">
-     <div class="col-7 card_popolari">
-       <div class="card">
-         <div class="row g-0">
-           <div class="col-md-2">
-             <img src="" class="img-fluid rounded-start" alt="...">
-           </div>
-           <div class="col-md-8">
-             <div class="card-body">
-               <div class="row">
-               <div class="numberTracks">${i+1}</div>
-               <h5 class="card-title col-4">${track.title}</h5>
-               <h5 class="card-views col-4">${track.rank}</h5>
-               <h5 class="card-duration col-4">${track.duration}</h5>
-             </div>
-           </div>
-           </div>
-         </div>
-     </div>
-   </div>
- `
- i++
-  });
+//      <div class="contenitore_body row">
+//      <div class="col-7 card_popolari">
+//        <div class="card">
+//          <div class="row g-0">
+//            <div class="col-md-2">
+//              <img src="" class="img-fluid rounded-start" alt="...">
+//            </div>
+//            <div class="col-md-8">
+//              <div class="card-body">
+//                <div class="row">
+//                <div class="numberTracks">${i+1}</div>
+//                <h5 class="card-title col-4">${track.title}</h5>
+//                <h5 class="card-views col-4">${track.rank}</h5>
+//                <h5 class="card-duration col-4">${track.duration}</h5>
+//              </div>
+//            </div>
+//            </div>
+//          </div>
+//      </div>
+//    </div>
+//  `
+//  i++
+//   });
  
-}
+// }
