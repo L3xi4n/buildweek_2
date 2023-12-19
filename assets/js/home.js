@@ -53,7 +53,7 @@ function cardsMixPreferiti(album, rowId) {
         <div class="card-body ">
            <a  class="text-decoration-none text-white" href="../../album.html?id=${album.id}"><h5 class="card-title text-white">${album.title}</h5></a> 
 
-            <a class="text-decoration-none text-primary" href="../../artista.html?id=${album.id}">
+            <a class="text-decoration-none" href="../../artista.html?id=${album.id}">
           <p class="card-text text-secondary">${album.artist.name}</p></a>
 
         </div>
