@@ -230,7 +230,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- body -->
 
         <div class="col-8 ps-5 p-0" id="body_home">
@@ -265,43 +265,90 @@
                 </svg>
               </div>
 
-  <!-- contenitore search -->
-    <div id="searchContainer" class="collapse">
-      <form class="d-flex " role="search" id="searchBar" onsubmit="onSearch(event)">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="cerca"
-          name="search"></input>
+              <!-- contenitore search -->
+              <div
+                id="searchContainer"
+                class="collapse bg-black rounded-5 mb-3"
+              >
+                <form
+                  class="d-flex text-white"
+                  role="search"
+                  id="searchBar"
+                  onsubmit="onSearch(event)"
+                >
+                  <button
+                    class="btn btn-outline-secondary collapsed rounded-5"
+                    id="button_search"
+                    type="submit"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
+                    aria-expanded="false"
+                    aria-controls="searchContainer"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      fill="white"
+                      class="bi bi-search"
+                      viewBox="0 0 18 18"
+                    >
+                      <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                      />
+                    </svg>
+                  </button>
+                  <input
+                    class="form-control me-2 bg-black border-0 text-white"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                    id="cerca"
+                    name="search"
+                  />
 
-        <button class="btn btn-outline-success collapsed" type="submit" data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop" aria-expanded="false" aria-controls="searchContainer">Search</button>
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Modal title
+                          </h1>
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            id="button_close_modal"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">...</div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                          <button type="button" class="btn btn-primary">
+                            Save changes
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
 
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </form>
-    </div>
-              <div id="contenitoreSearch">
-                <!-- <form class="d-flex d-none" role="search" id="searchBar">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
-              </div>
+              <!-- cards buongiorno -->
             </div>
             <div class="card mb-3" id="cardGrande"></div>
             <h3 class="titoliBody my-4">Buongiorno</h3>
@@ -705,7 +752,7 @@
       aria-hidden="true"
     >
       <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content bg-black">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
             <button

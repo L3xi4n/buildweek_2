@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-   <div class="container-fluid">
+    <div class="container-fluid">
       <div class="row">
         <div class="p-0 col-2 bg-black" id="navSx">
-          <!-- side navbar sx -->
-          <div class="ps-2 fw-semibold">
+           <!-- side navbar sx -->
+           <div class="ps-2 fw-semibold">
             <div>
               <ul id="listNavSx_home">
                 <!-- 3_dots -->
@@ -53,9 +53,13 @@
                 <!-- search -->
                 <li>
                   <button
-                    class="bg-black border border-0 p-0 fw-bold"
+                    class="bg-black border border-0 p-0 fw-bold collapsed"
                     id="btnSearch"
-                    onclick="search(true)"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#searchContainer"
+                    aria-expanded="false"
+                    aria-controls="searchContainer"
                   >
                     <div class="text-white">
                       <svg
@@ -74,7 +78,6 @@
                     </div>
                   </button>
                 </li>
-
                 <!-- library -->
                 <li>
                   <div class="text-white">
@@ -116,7 +119,7 @@
                           d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0"
                         />
                       </svg>
-                      Crea playlist
+                      &nbsp;Crea playlist
                     </div>
                   </li>
 
@@ -136,7 +139,7 @@
                           d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
                         />
                       </svg>
-                      Brani che ti piacciono
+                      &nbsp;Brani che ti piacciono
                     </div>
                   </li>
                   <!-- bookmark -->
@@ -154,7 +157,7 @@
                           d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"
                         />
                       </svg>
-                      I tuoi episodi
+                      &nbsp;I tuoi episodi
                     </div>
                   </li>
                 </ul>
@@ -259,58 +262,151 @@
             </svg>
           </div>
 
+          <div id="searchContainer" class="collapse bg-black rounded-5 mb-3">
+            <form
+              class="d-flex text-white"
+              role="search"
+              id="searchBar"
+              onsubmit="onSearch(event)"
+            >
+              <button
+                class="btn btn-outline-secondary collapsed rounded-5"
+                id="button_search"
+                type="submit"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                aria-expanded="false"
+                aria-controls="searchContainer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="white"
+                  class="bi bi-search"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                  />
+                </svg>
+              </button>
+              <input
+                class="form-control me-2 bg-black border-0 text-white"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                id="cerca"
+                name="search"
+              />
+
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Modal title
+                      </h1>
+
+                      <button
+                        type="button"
+                        class="btn-close"
+                        id="button_close_modal"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">...</div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Save changes
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
           <!-- display artista -->
           <div class="text-white" id="rowArtist">
             <!-- buttons in js -->
           </div>
-<!-- canzoni -->
+          <!-- canzoni -->
           <div class="row text-white">
             <h5 class="col-8">Popolari</h5>
             <h5 class="col-3 ms-5">Brani che ti piacciono</h5>
           </div>
           <div class="row">
-           <div class="contenitore_body d-flex gap-5">
-            <table class=" table-borderless bg-dark text-white col-8">
-              <thead>
-                <tr class=" border-bottom col-8">
-                  <th class=" numberTable" style="width: 5%">#</th>
-                  <th class="col-7">Titolo</th>
-                  <th class="col-2 text-center" >Riproduzioni</th>
-                  <th  class="text-center col-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stopwatch" viewBox="0 0 16 16">
-                    <path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5z"/>
-                    <path d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64a.715.715 0 0 1 .012-.013l.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354a.512.512 0 0 1-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5M8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3"/>
-                  </svg></th>
-                </tr>
-              </thead>
-              <tbody id="tabella">
-               <!-- tabella javascript -->
-              </tbody>
-            </table> 
-<!-- Brani che ti piacciono -->
-            <div class="col-3 px-0">
+            <div class="contenitore_body d-flex gap-5">
+              <table class="table-borderless bg-dark text-white col-8">
+                <thead>
+                  <tr class="border-bottom col-8">
+                    <th class="numberTable" style="width: 5%">#</th>
+                    <th class="col-7">Titolo</th>
+                    <th class="col-2 text-center">Riproduzioni</th>
+                    <th class="text-center col-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-stopwatch"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5z"
+                        />
+                        <path
+                          d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64a.715.715 0 0 1 .012-.013l.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354a.512.512 0 0 1-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5M8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3"
+                        />
+                      </svg>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="tabella">
+                  <!-- tabella javascript -->
+                </tbody>
+              </table>
+              <!-- Brani che ti piacciono -->
+              <div class="col-3 px-0">
                 <div class="card">
                   <div class="row g-0">
                     <div class="col-md-4">
-                      <img src="" class="img-fluid rounded-start" alt="...">
+                      <img src="" class="img-fluid rounded-start" alt="..." />
                     </div>
                     <div class="col-md-8">
                       <div class="card-body">
-                        <h5 class="card-title">Hai messo mi piace a 11 brani</h5>
+                        <h5 class="card-title">
+                          Hai messo mi piace a 11 brani
+                        </h5>
                         <p>Di artista</p>
                         <small></small>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
             </div>
+            <small class="text-white">VISUALIZZA ALTRO</small>
           </div>
-          <small class="text-white">VISUALIZZA ALTRO</small>
         </div>
-      </div>
-
 
         <!-- navbar dx -->
-      <div class="col-2 bg-black ps-3 pe-1" id="navDx">
+        <div class="col-2 bg-black ps-3 pe-1" id="navDx">
           <!-- apre col-espi -->
           <div>
             <!-- apre container navbar  -->
@@ -684,6 +780,44 @@
       </div>
     </div>
 
+    <!-- Search Modal -->
+    <div
+      class="modal modal-xl fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content bg-black">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="searchCardContainer" class="d-flex flex-wrap gap-2"></div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/artista.js"></script>
   </body>
 </html>
