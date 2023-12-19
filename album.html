@@ -270,54 +270,102 @@
             </div>
 
             <!-- inizio tabella -->
-            <div id="tabella">
-              <table class="table table-borderless table-dark ">
-                <thead>
-                  <tr class="border border-bottom">
-                    <th class=" numberTable" style="width: 5%">#</th>
-                    <th style="width: 55%">Titolo</th>
-                    <th class="d-flex justify-content-end" style="width: 30%">Riproduzioni</th>
-                    <th style="width: 10%" class="text-center ">🕐</th>
-                  </tr>
-                </thead>
-                <tbody >
-                  <tr>
-                    <th scope="row" class="numberTable">1</th>
-                    <td>Mark</td>
-                    <td class="d-flex justify-content-end" style="width: 30%">Otto</td>
-                    <td >@mdo</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <table class="table table-borderless " style="opacity:1;">
+              <thead>
+                <tr class="border border-bottom">
+                  <th class=" numberTable" style="width: 5%">#</th>
+                  <th class="col-7">Titolo</th>
+                  <th class="col-2 text-center" >Riproduzioni</th>
+                  <th  class="text-center col-2">🕐</th>
+                </tr>
+              </thead>
+              <tbody id="tabella">
+               <!-- tabella javascript -->
+              </tbody>
+            </table> 
           </div>
         </div>
         
-        <div class="col-2 px-0 p-1 bg-black"id="navDx"><!-- apre col-espi -->
-            <div class="bg-black"><!-- apre container navbar  -->
-              <div class=" d-flex justify-content-end text-light gap-1"><!-- apre navbar -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-ligh-lg"
-                  viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" class="bi bi-square bg-transparent"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-x-square-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708"
-                  />
-                </svg>
+        <div class="col-2 bg-black ps-3 pe-1" id="navDx">
+          <!-- apre col-espi -->
+          <div>
+            <!-- apre container navbar  -->
+            <div class="d-flex justify-content-end text-light gap-4 py-2">
+              <!-- apre navbar -->
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-ligh-lg"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="11"
+                height="11"
+                fill="currentColor"
+                class="bi bi-square bg-transparent"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-x-lg"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+                />
+              </svg>
+            </div>
+            <!-- chiude navbar -->
+            <div class="row">
+              <div class="text-light d-flex justify-content-between px-1">
+                <!-- apre activita -->
+                <div class="h6 py-2">Attività amici</div>
+                <div>
+                  <!-- apre activita img -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-person-add"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
+                    />
+                    <path
+                      d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-x-lg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+                    />
+                  </svg>
+                </div>
               </div>
               <!-- chiude activita img -->
             </div>
