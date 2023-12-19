@@ -104,21 +104,23 @@ function cardGrande(album) {
 }
 
 function onSearch(event) {
-  const container = document.getElementById("searchCardContainer");
-  container.innerHTML = `<div class="text-center">
-  <div class="spinner-border" role="status">
-  <span class="visually-hidden">Loading...</span>
-  </div>
-</div>`;
   event.preventDefault();
 
-  fetch(
-    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${event.target.elements.search.value}`
-  )
+  const query = event.target.elements.search.value;
+
+  const container = document.getElementById("searchCardContainer");
+  container.innerHTML = `
+  <div class="text-center">
+    <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>`;
+
+  fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`)
     .then((response) => response.json())
     .then(({ data }) => {
-      container.innerHTML = '';
-      
+      container.innerHTML = "";
+
       data?.forEach((item) => {
         container.innerHTML += `
           <div class="card mb-3" style="max-width: 540px;">
