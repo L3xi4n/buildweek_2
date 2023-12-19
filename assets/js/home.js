@@ -94,8 +94,10 @@ function cardGrande(album) {
   <div class="col-md-10 text-white">
     <div class="card-body ms-3">
     <p>ALBUM</p>
-      <div class="display-1 fw-bold">${data.title}</div>
-      <div class="mb-3"> ${data.artist.name}</div>
+    <a class="text-decoration-none text-white " href="../../album.html?id=${data.id}"><div class="display-1 fw-bold">${data.title}</div></a>
+
+    <a class="text-decoration-none text-white " href="../../artista.html?id=${data.id}"><div class="mb-3"> ${data.artist.name}</div></a>
+
       <div class="my-3">Ascolta il nuovo singolo di ${data.artist.name}</div> 
       <button type="button" class="btn btn-success text-dark border rounded-5 px-4 py-2 fw-bold" id="btnPlay">Play</button>
       <button type="button" class="btn btn-dark  rounded-5 px-4 py-2" id="btnSave">Salva</button>
