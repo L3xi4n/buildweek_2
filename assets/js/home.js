@@ -157,3 +157,14 @@ async function ricerca() {
       console.error("Errore durante la ricerca:", error);
   }
 }
+
+
+/* frecce avanti e indietro */
+// Aggiungi un gestore di eventi per le frecce
+document.getElementById('prevArrow').addEventListener('click', function() {
+  window.history.back(); // Torna indietro nella cronologia del browser
+});
+
+document.getElementById('nextArrow').addEventListener('click', function() {
+  window.history.forward(); // Avanti nella cronologia del browser
+});

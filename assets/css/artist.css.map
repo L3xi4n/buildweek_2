@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["artist.scss"],"names":[],"mappings":"AAAQ;AAER;EACE;;;AAIF;EACE;EACA;;;AAEF;EACE;EACA;EACA;EACI;;;AAGN;EACE;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA","file":"artist.css"}
+{"version":3,"sources":["artist.scss","artist.css"],"names":[],"mappings":"AAAQ,wGAAA;AAER;EACE,iCAAA;ACAF;;ADIA;EACE,yBAAA;EACA,UAAA;ACDF;;ADGA;EACE,yBAAA;EACA,YAAA;EACA,kBAAA;EACI,YAAA;ACAN;;ADGA;EACE,yBAAA;EACA,YAAA;EACA,WAAA;EACA,YAAA;EACA,mBAAA;ACAF;;ADGA;EACE,gBAAA;EACA,YAAA;EACA,iBAAA;EACA,8BAAA;ACAF","file":"artist.css"}
