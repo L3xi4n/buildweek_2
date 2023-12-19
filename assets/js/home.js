@@ -49,9 +49,12 @@ function cardsMixPreferiti(album, rowId) {
     <div class=" col-xs-12  col-sm-6 col-md-4 col-lg-2 ">
     <div class="card h-100 cardPopolo">
         <img src="${album.cover}" class="card-img-top p-3 coversAlbumsHome" alt="...">
-        <div class="card-body">
-           <a  class="text-decoration-none" href="../../album.html?id=${album.id}"><h5 class="card-title text-white">${album.title}</h5></a> 
-            <p class="card-text text-secondary">${album.artist.name}</p>
+        <div class="card-body ">
+           <a  class="text-decoration-none text-white" href="../../album.html?id=${album.id}"><h5 class="card-title text-white">${album.title}</h5></a> 
+
+            <a class="text-decoration-none" href="../../artista.html?id=${album.id}">
+          <p class="card-text text-secondary">${album.artist.name}</p></a>
+
         </div>
     </div>
     </div>`;
@@ -64,12 +67,13 @@ function cardsBuongiorno(album) {
     <div class="col-4 my-2">
     <div class="card col-12 border-0 text-white">
       <div class="row g-0 cardBuongiorno">
-        <div class="col-md-4">
-          <img src="${album.cover}" class="img-fluid rounded-start" alt="...">
+        <div class="col-md-3">
+          <img src="${album.cover}" class="img-fluid rounded-start " alt="...">
         </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">${album.title}</h5>
+        <div class="col-md-9 my-auto">
+          <div class="card-body d-flex ">
+          <a class="text-decoration-none text-white " href="../../album.html?id=${album.id}"><h5 class="card-title ">${album.title}</h5></a> 
+         
             
           </div>
         </div>
@@ -84,17 +88,18 @@ function cardGrande(album) {
     .then((data) => {
       const cardGrande = document.getElementById("cardGrande");
       cardGrande.innerHTML += `<div class="row g-0">
-  <div class="col-md-2">
-    <img src="${data.cover}" class="img-fluid rounded-start mx-3 my-4" alt="..." >
+  <div class="col-md-2 ">
+    <img src="${data.cover}" class="img-fluid  mx-3 my-4" alt="..." width="90%"  >
   </div>
   <div class="col-md-10 text-white">
-    <div class="card-body">
-      <div class="display-2 fw-bold">${data.title}</div>
-      <div> ${data.artist.name}</div>
-      <div>Ascolta il nuovo singolo di ${data.artist.name}</div> 
+    <div class="card-body ms-3">
+    <p>ALBUM</p>
+      <div class="display-1 fw-bold">${data.title}</div>
+      <div class="mb-3"> ${data.artist.name}</div>
+      <div class="my-3">Ascolta il nuovo singolo di ${data.artist.name}</div> 
       <button type="button" class="btn btn-success text-dark border rounded-5 px-4 py-2 fw-bold" id="btnPlay">Play</button>
-      <button type="button" class="btn btn-dark border border-white rounded-5 px-4 py-2" id="btnSave">Salva</button>
-      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="18" fill="currentColor" id="icon" class="bi bi-three-dots" viewBox="0 0 16 16">
+      <button type="button" class="btn btn-dark  rounded-5 px-4 py-2" id="btnSave">Salva</button>
+      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="25" fill="grey" id="icon" class="bi bi-three-dots" viewBox="0 0 16 16">
         <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
       </svg>
     </div>
@@ -121,7 +126,6 @@ function onSearch(event) {
   fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`)
     .then((response) => response.json())
     .then(({ data }) => {
-
       title.innerText = `Search for ${query}`;
       container.innerHTML = "";
 
@@ -144,3 +148,13 @@ function onSearch(event) {
       });
     });
 }
+
+/* frecce avanti e indietro */
+// Aggiungi un gestore di eventi per le frecce
+document.getElementById("prevArrow").addEventListener("click", function () {
+  window.history.back(); // Torna indietro nella cronologia del browser
+});
+
+document.getElementById("nextArrow").addEventListener("click", function () {
+  window.history.forward(); // Avanti nella cronologia del browser
+});

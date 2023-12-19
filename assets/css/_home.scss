@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100px !important;
+}
+
+// home page
+.cuoricino_nav{
+  background: linear-gradient(150deg, rgba(69,30,181,1) 1%, rgba(206,189,255,1) 78%, rgba(208,241,220,1) 100%);
+}
+
+.bookmark_nav{
+  background-color: green;
+  fill: rgb(0, 227, 15);
+}
+
+#listNavSx_home{
+  list-style: none;
+  padding: 1rem;
+  margin-bottom: 0;
+}
+#listNavSx_home > li{
+  padding: 0.4rem 0 0.4rem 0;
+  font-size: 14px;
+}
+
+// ::-webkit-scrollbar {
+//   width: 10px;
+// }
+// ::-webkit-scrollbar-track {
+//   background: #f1f1f1; 
+// }
+// ::-webkit-scrollbar-thumb {
+//   background: #888; 
+// }
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #555;
+// }
+.scrollbar_home > ul{ max-height: 800px; 
+  overflow: auto; }
+
+#hr_home{
+  border: none;
+  border-top: 1.7px solid gray;
+  height: 0;
+  width: 90%;
+  margin-left: 0.5rem;
+}
+
+#navSx {
+  width: 15%;
+}
+
+#body_home{
+  background-color: #212121;
+  width: 74%; 
+  
+}
+
+#nextArrow {
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+#prevArrow {
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+#scrollableSection {
+  max-height: 74%; /* Altezza massima della sezione con barra di scorrimento */
+  overflow: auto; /* Aggiunge una barra di scorrimento quando il contenuto supera l'altezza massima */
+  overflow-x: hidden;
+}
+
+#bottoneVerdePlay {
+  color: #1ED760 !important;
+}
+
+
+#navDx {
+  width: 11%;
+}
+
+.icon-background {
+  background-color: #131313;
+  color: white;
+  border-radius: 80%; 
+      padding: 5px; 
+}
+
+.titoliBody {
+  color: white;
+}
+
+#btnPlay {
+  background-color: #1ED760;
+  border: 1px solid #1ED760 !important;
+  padding: 12px 32px !important;
+  margin-right: 0.9rem;
+}
+
+#btnSave {
+  background-color: #000000;
+  border: 1px solid #999999;
+  padding: 12px 32px !important;
+  margin-right: 0.8rem;
+}
+
+#cardGrande {
+  background: linear-gradient(42deg, rgba(0,0,0,1) 0%, rgba(18,18,18,1) 20%, rgba(33,33,33,1) 100%);
+  border: none;
+}
+
+#icon {
+  color: rgb(255, 255, 255);
+}
+
+.cardBuongiorno{
+background-color: #2d2d2d;
+border: none;
+}
+
+.cardPopolo{
+  background-color: #171717;
+}
+
+.coversAlbumsHome{
+border-radius: 20px;
+}
+
+// artist page
+
+
+// album page
