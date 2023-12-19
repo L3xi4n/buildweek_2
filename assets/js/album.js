@@ -20,18 +20,14 @@ function detailsAlbum(album) {
     const containerAlbum = document.getElementById("rowAlbum");
     containerAlbum.innerHTML= "";
     containerAlbum.innerHTML = ` <div class="col-md-2">
-    <img src="${album.cover}" class="img-fluid rounded-start mx-3 my-4" alt="..." >
+    <img src="${album.cover}" class="img-fluid  mx-4 my-4 w-100" alt="..." >
   </div>
-  <div class="col-md-10 text-white">
+  <div class="col-md-9 mx-5 text-white my-auto">
+
     <div class="card-body">
-      <div class="display-2 fw-bold">${album.title}</div>
+    <p>ALBUM</p>
+      <div class="display-1 fw-bold mt-4">${album.title}</div>
       <div> ${album.artist.name}</div>
-      <div>Ascolta il nuovo singolo di ${album.artist.name}</div> 
-      <button type="button" class="btn btn-success text-dark border rounded-5 px-4 py-2 fw-bold" id="btnPlay">Play</button>
-      <button type="button" class="btn btn-dark border border-white rounded-5 px-4 py-2" id="btnSave">Salva</button>
-      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="18" fill="currentColor" id="icon" class="bi bi-three-dots" viewBox="0 0 16 16">
-        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
-      </svg>
     </div>
   </div>`
 }
@@ -54,13 +50,13 @@ function tableAlbum(tracks){
  
 }
 
-function bgBody(foto){
+/* function bgBody(foto){
 const body = document.getElementById("body_home") 
 body.style.backgroundImage = `url('${foto.cover_xl}')`
 body.style.backgroundRepeat = "no-repeat"
-body.style.backgroundSize = "300%"
+body.style.backgroundSize = "100%"
 
-}
+} */
 
 window.onload = () => {
 createAlbum()

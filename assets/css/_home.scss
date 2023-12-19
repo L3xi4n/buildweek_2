@@ -60,10 +60,12 @@ body {
 
 #nextArrow {
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 #prevArrow {
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 #scrollableSection {
@@ -72,6 +74,9 @@ body {
   overflow-x: hidden;
 }
 
+#bottoneVerdePlay {
+  color: #1ED760 !important;
+}
 
 
 #navDx {
@@ -92,11 +97,15 @@ body {
 #btnPlay {
   background-color: #1ED760;
   border: 1px solid #1ED760 !important;
+  padding: 12px 32px !important;
+  margin-right: 0.9rem;
 }
 
 #btnSave {
   background-color: #000000;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid #999999;
+  padding: 12px 32px !important;
+  margin-right: 0.8rem;
 }
 
 #cardGrande {

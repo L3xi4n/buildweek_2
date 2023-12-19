@@ -56,9 +56,8 @@ body {
 }
 
 #scrollableSection {
-  max-height: 74%; /* Altezza massima della sezione con barra di scorrimento */
+  max-height: 100%; /* Altezza massima della sezione con barra di scorrimento */
   overflow: auto; /* Aggiunge una barra di scorrimento quando il contenuto supera l'altezza massima */
-  
 }
 
 #navDx {
