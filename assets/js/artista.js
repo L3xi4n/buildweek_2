@@ -12,6 +12,7 @@ function createArtist() {
   .then((response) => response.json())
   .then((data) => {cardArtist(data)
     console.log(data)
+    tableAlbum(data.tracks.data) 
 })
   }
 
@@ -62,35 +63,20 @@ containerArtist.innerHTML = `
 }
 
 // funzione per displayare le canzoni
-// function tableAlbum(tracks){
-//   const tableAlbum = document.getElementById("contenitore_body")
-//   tableAlbum.innerHTML = "";
-//   let i = 0
-//   tracks.forEach((track) => {
-//      tableAlbum.innerHTML += `
-
-//      <div class="contenitore_body row">
-//      <div class="col-7 card_popolari">
-//        <div class="card">
-//          <div class="row g-0">
-//            <div class="col-md-2">
-//              <img src="" class="img-fluid rounded-start" alt="...">
-//            </div>
-//            <div class="col-md-8">
-//              <div class="card-body">
-//                <div class="row">
-//                <div class="numberTracks">${i+1}</div>
-//                <h5 class="card-title col-4">${track.title}</h5>
-//                <h5 class="card-views col-4">${track.rank}</h5>
-//                <h5 class="card-duration col-4">${track.duration}</h5>
-//              </div>
-//            </div>
-//            </div>
-//          </div>
-//      </div>
-//    </div>
-//  `
-//  i++
-//   });
+function tableAlbum(tracks){
+  const tableAlbum = document.getElementById("tabella")
+  tableAlbum.innerHTML = "";
+  let i = 0
+  tracks.forEach((track) => {
+     tableAlbum.innerHTML += `
+    <tr class= "text-white">
+      <th scope="row" class="numberTable">${i+1}</th>
+      <td class = "fw-bold">${track.title}</td>
+      <td class="text-center fw-bold" >${track.rank}</td>
+      <td class="text-center fw-bold">${track.duration}</td>
+    </tr>
+ `
+ i++
+  });
  
-// }
+}

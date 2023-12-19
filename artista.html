@@ -230,7 +230,7 @@
 
         <!-- frecce di navigazione -->
 
-        <div class="col-8" id="body_artist">
+        <div class="col-8" id="body_home">
           <div class="col mt-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -261,67 +261,34 @@
 
           <!-- display artista -->
           <div class="text-white" id="rowArtist">
-            <!-- <div> 
-               <div class="verificato">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="blue" class="bi bi-patch-check-fill" viewBox="0 0 20 20">
-                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
-              </svg>
-              Artista verificato</div>
-              <div class="nome_artista">Nome artista</div>
-              <div class="ascoltatori_mensili">
-                3.433.158 ascoltatori mensili
-              </div> 
-             </div> -->
-<!-- bottoni -->
-            <div class="buttons">
-              <button class="" id="play_button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                  <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
-                </svg>
-              </button>
-              <button id="follow_button">FOLLOWING</button>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="18"
-                fill="currentColor"
-                id="icon"
-                class="bi bi-three-dots"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
-                />
-              </svg>
-            </div>
+            <!-- buttons in js -->
           </div>
 <!-- canzoni -->
           <div class="row text-white">
-            <h5 class="col-7">Popolari</h5>
-            <h5 class="col-5">Brani che ti piacciono</h5>
+            <h5 class="col-8">Popolari</h5>
+            <h5 class="col-3 ms-5">Brani che ti piacciono</h5>
           </div>
-           <div class="contenitore_body row">
-              <div class="col-7 card_popolari">
-                <div class="card">
-                <!--   <div class="row g-0">
-                   <div class="col-md-2">
-                      <img src="" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                      <div class="card-body">
-                        <div class="row">
-                        <h5 class="card-title col-4">Card title</h5>
-                        <h5 class="card-views col-4">Card views</h5>
-                        <h5 class="card-duration col-4">Card duration</h5>
-                      </div>
-                    </div>
-                    </div> 
-                  </div>-->
-              </div>
-            </div>
+          <div class="row">
+           <div class="contenitore_body d-flex gap-5">
+            <table class=" table-borderless bg-dark text-white col-8">
+              <thead>
+                <tr class=" border-bottom col-8">
+                  <th class=" numberTable" style="width: 5%">#</th>
+                  <th class="col-7">Titolo</th>
+                  <th class="col-2 text-center" >Riproduzioni</th>
+                  <th  class="text-center col-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stopwatch" viewBox="0 0 16 16">
+                    <path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5z"/>
+                    <path d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64a.715.715 0 0 1 .012-.013l.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354a.512.512 0 0 1-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5M8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3"/>
+                  </svg></th>
+                </tr>
+              </thead>
+              <tbody id="tabella">
+               <!-- tabella javascript -->
+              </tbody>
+            </table> 
 <!-- Brani che ti piacciono -->
-            <div class="col-4">
-                <div class="card col-12">
+            <div class="col-3 px-0">
+                <div class="card">
                   <div class="row g-0">
                     <div class="col-md-4">
                       <img src="" class="img-fluid rounded-start" alt="...">
@@ -339,7 +306,7 @@
           </div>
           <small class="text-white">VISUALIZZA ALTRO</small>
         </div>
-
+      </div>
 
 
         <!-- navbar dx -->
