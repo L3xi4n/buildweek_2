@@ -50,13 +50,13 @@ function tableAlbum(tracks){
  
 }
 
-/* function bgBody(foto){
-const body = document.getElementById("body_home") 
-body.style.backgroundImage = `url('${foto.cover_xl}')`
-body.style.backgroundRepeat = "no-repeat"
-body.style.backgroundSize = "100%"
-
-} */
+//  function bgBody(foto){
+// const body = document.getElementById("body_home") 
+// body.style.backgroundImage = `url('${foto.cover_xl}')`
+// body.style.backgroundRepeat = "no-repeat"
+// body.style.backgroundSize = "100%"
+// body.style.opacity = "80%"
+// } 
 
 window.onload = () => {
 createAlbum()

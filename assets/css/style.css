@@ -11899,7 +11899,7 @@ body {
 }
 
 #body_home {
-  background-color: #212121;
+  background-color: #212529;
   width: 74%;
 }
 
@@ -12003,4 +12003,8 @@ body {
   color: white;
   font-weight: bold;
   border-radius: 20% solid white;
+}
+
+#verificato {
+  color: #3d91f4;
 }/*# sourceMappingURL=style.css.map */

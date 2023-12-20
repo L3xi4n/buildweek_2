@@ -9,7 +9,7 @@ const albumMixPreferiti = [
 const albumRecenti = [721833, 1329897, 1329898, 1329889, 81763, 68346981];
 
 const albumPiuAscoltati = [
-  664237, 10966110, 86773062, 71624, 345122517, 302204417,
+  664237, 10966110, 86773062, 71624, 345122517, 43038471,
 ];
 
 window.onload = function () {
